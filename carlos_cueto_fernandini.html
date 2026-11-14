@@ -1,0 +1,2339 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IESTP "Carlos Cueto Fernandini" | Ciencia y Tecnología - Lima, Perú</title>
+  <meta name="description" content="Instituto de Educación Superior Tecnológico Público Carlos Cueto Fernandini (Lima - Perú). Ciencia y Tecnología: conoce nuestras 9 carreras profesionales técnicas y contáctanos por WhatsApp." />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Configuración de Tailwind con la Paleta Oficial del Escudo Institucional -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            cueto: {
+              navy: '#082470',       /* Azul Marino/Real institucional */
+              navyDark: '#05184C',   /* Azul Marino profundo para contrastes */
+              cobalt: '#1D4ED8',     /* Azul Cobalto */
+              sky: '#0EA5E9',        /* Celeste Tecnológico */
+              skyLight: '#E0F2FE',   /* Celeste suave de apoyo */
+              surface: '#F8FAFC',    /* Fondo neutro limpio */
+            },
+            whatsapp: {
+              DEFAULT: '#25D366',
+              dark: '#128C7E',
+              hover: '#1EBE5D',
+              bg: '#EFEAE2',
+              bubble: '#D9FDD3',
+            }
+          },
+          boxShadow: {
+            'soft': '0 10px 30px -5px rgba(8, 36, 112, 0.08)',
+            'card': '0 4px 20px -2px rgba(8, 36, 112, 0.06)',
+            'crest': '0 20px 45px -12px rgba(8, 36, 112, 0.28)',
+            'whatsapp': '0 10px 25px -5px rgba(37, 211, 102, 0.45)',
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F8FAFC;
+      color: #0F172A;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .font-display {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Fondo institucional del Hero con tonos oficiales (#082470, #1D4ED8, #0EA5E9) */
+    .hero-institutional {
+      background-color: #082470;
+      background-image:
+        radial-gradient(circle at 82% 18%, rgba(14, 165, 233, 0.24) 0%, transparent 45%),
+        radial-gradient(circle at 14% 84%, rgba(29, 78, 216, 0.35) 0%, transparent 48%),
+        linear-gradient(135deg, #05184C 0%, #082470 52%, #113493 100%);
+    }
+
+    /* Patrón sutil de cuadrícula tecnológica */
+    .tech-grid-overlay {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 36px 36px;
+    }
+
+    /* Fondo clásico estilo WhatsApp para la vista previa en vivo */
+    .wa-chat-canvas {
+      background-color: #EFEAE2;
+      background-image: radial-gradient(#d4cdc3 1px, transparent 1px);
+      background-size: 18px 18px;
+    }
+
+    /* Pulso suave en botón flotante WhatsApp */
+    @keyframes pulseRing {
+      0% { transform: scale(0.95); opacity: 0.7; }
+      70% { transform: scale(1.25); opacity: 0; }
+      100% { transform: scale(1.25); opacity: 0; }
+    }
+    .wa-pulse::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 9999px;
+      background-color: #25D366;
+      z-index: -1;
+      animation: pulseRing 2.2s infinite;
+    }
+
+    /* Ocultar scrollbar en pestañas horizontales móviles */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-cueto-navy selection:text-white">
+
+  <!-- =====================================================================
+       1. BARRA SUPERIOR INSTITUCIONAL
+       ===================================================================== -->
+  <div class="bg-cueto-navyDark text-slate-100 text-xs border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex flex-wrap items-center gap-x-5 gap-y-1">
+        <span class="inline-flex items-center gap-1.5 font-semibold text-sky-300">
+          <i class="fa-solid fa-atom"></i>
+          Ciencia y Tecnología • Lima - Perú
+        </span>
+        <span class="hidden sm:inline-flex items-center gap-1.5 text-slate-300">
+          <i class="fa-solid fa-location-dot text-cueto-sky"></i>
+          Av. Túpac Amaru s/n Km. 8 1/2, Comas, Lima
+        </span>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <span class="hidden md:inline-flex items-center gap-1.5 text-slate-300">
+          <i class="fa-solid fa-phone text-cueto-sky"></i>
+          (01) 680-4480
+        </span>
+        <button
+          type="button"
+          onclick="openDirectWhatsApp('Hola IESTP Carlos Cueto Fernandini, deseo recibir información sobre sus 9 carreras profesionales técnicas y admisión.')"
+          class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-whatsapp/20 hover:bg-whatsapp/30 text-emerald-300 font-semibold transition-colors cursor-pointer"
+        >
+          <i class="fa-brands fa-whatsapp text-sm text-whatsapp"></i>
+          <span>Atención WhatsApp</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       2. NAVBAR FIJO RESPONSIVO CON ESCUDO OFICIAL VECTORIZADO
+       ===================================================================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Escudo Oficial SVG + Denominación Institucional -->
+        <a href="#inicio" class="flex items-center gap-3 group focus:outline-none">
+          <div id="navbarCrestSlot" class="w-12 h-16 shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <!-- Escudo SVG de alta precisión inyectado vía JS con IDs únicos -->
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="text-[11px] font-extrabold uppercase tracking-wider text-cueto-cobalt">IESTP Público</span>
+              <span class="w-1 h-1 rounded-full bg-cueto-sky"></span>
+              <span class="text-[11px] font-semibold text-slate-500 uppercase tracking-wide">Lima - Perú</span>
+            </div>
+            <p class="font-display font-extrabold text-sm sm:text-lg text-cueto-navy leading-tight">
+              "Carlos Cueto Fernandini"
+            </p>
+            <p class="text-[10px] font-bold uppercase tracking-widest text-cueto-sky hidden sm:block">
+              Ciencia y Tecnología
+            </p>
+          </div>
+        </a>
+
+        <!-- Enlaces de Navegación Desktop -->
+        <nav class="hidden lg:flex items-center gap-7" aria-label="Navegación Principal">
+          <a href="#inicio" class="text-sm font-semibold text-slate-700 hover:text-cueto-navy transition-colors">Inicio</a>
+          <a href="#carreras" class="text-sm font-semibold text-slate-700 hover:text-cueto-navy transition-colors">Carreras (9)</a>
+          <a href="#admision" class="text-sm font-semibold text-slate-700 hover:text-cueto-navy transition-colors">Admisión</a>
+          <a href="#nosotros" class="text-sm font-semibold text-slate-700 hover:text-cueto-navy transition-colors">Nosotros</a>
+          <a href="#consulta-whatsapp" class="text-sm font-semibold text-slate-700 hover:text-cueto-navy transition-colors">Consulta WhatsApp</a>
+        </nav>
+
+        <!-- Botón WhatsApp + Botón Menú Móvil -->
+        <div class="flex items-center gap-2.5">
+          <button
+            type="button"
+            onclick="openDirectWhatsApp('Hola IESTP Carlos Cueto Fernandini, me gustaría recibir información sobre admisión y sus 9 carreras técnicas.')"
+            class="inline-flex items-center gap-2 bg-whatsapp hover:bg-whatsapp-hover text-white font-semibold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-md hover:shadow-whatsapp transition-all active:scale-95 cursor-pointer"
+          >
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span class="hidden sm:inline">Escribir por WhatsApp</span>
+            <span class="sm:hidden">WhatsApp</span>
+          </button>
+
+          <button
+            id="mobileMenuBtn"
+            type="button"
+            aria-label="Abrir menú de navegación"
+            aria-expanded="false"
+            class="lg:hidden p-2.5 rounded-xl border border-slate-200 text-cueto-navy hover:bg-slate-100 transition-colors"
+          >
+            <i id="mobileMenuIcon" class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Drawer Móvil -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 pt-3 pb-5 space-y-1.5 shadow-xl">
+      <a href="#inicio" onclick="closeMobileMenu()" class="block px-4 py-3 rounded-xl font-semibold text-slate-700 hover:bg-sky-50 hover:text-cueto-navy">
+        <i class="fa-solid fa-house w-6 text-cueto-navy"></i> Inicio
+      </a>
+      <a href="#carreras" onclick="closeMobileMenu()" class="block px-4 py-3 rounded-xl font-semibold text-slate-700 hover:bg-sky-50 hover:text-cueto-navy">
+        <i class="fa-solid fa-graduation-cap w-6 text-cueto-cobalt"></i> Carreras (9)
+      </a>
+      <a href="#admision" onclick="closeMobileMenu()" class="block px-4 py-3 rounded-xl font-semibold text-slate-700 hover:bg-sky-50 hover:text-cueto-navy">
+        <i class="fa-solid fa-file-signature w-6 text-cueto-sky"></i> Admisión
+      </a>
+      <a href="#nosotros" onclick="closeMobileMenu()" class="block px-4 py-3 rounded-xl font-semibold text-slate-700 hover:bg-sky-50 hover:text-cueto-navy">
+        <i class="fa-solid fa-building-columns w-6 text-cueto-navy"></i> Nosotros
+      </a>
+      <a href="#consulta-whatsapp" onclick="closeMobileMenu()" class="block px-4 py-3 rounded-xl font-semibold text-slate-700 hover:bg-sky-50 hover:text-cueto-navy">
+        <i class="fa-brands fa-whatsapp w-6 text-whatsapp-dark"></i> Consulta WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       3. HERO SECTION INSTITUCIONAL CON ESCUDO DESTACADO
+       ===================================================================== -->
+  <section id="inicio" class="hero-institutional text-white relative overflow-hidden">
+    <div class="absolute inset-0 tech-grid-overlay pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 lg:pt-20 lg:pb-24 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <!-- Columna Izquierda: Mensaje Principal y CTAs -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-sky-300/25 backdrop-blur-sm text-xs sm:text-sm font-semibold text-sky-200">
+            <span class="w-2 h-2 rounded-full bg-cueto-sky animate-ping"></span>
+            <span>IESTP "Carlos Cueto Fernandini" • Comas, Lima - Perú</span>
+          </div>
+
+          <h1 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-[2.9rem] leading-[1.15] tracking-tight text-white">
+            Formación Tecnológica Pública de Excelencia
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl">
+            Bajo nuestro lema institucional <strong class="text-sky-300 font-bold">"Ciencia y Tecnología"</strong>, impulsamos el desarrollo profesional técnico en Lima Norte con <strong class="text-white font-semibold">9 carreras profesionales de alta demanda</strong>, infraestructura equipada y <strong class="text-white font-semibold">Título a Nombre de la Nación</strong>.
+          </p>
+
+          <!-- Botones CTA Principales -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
+            <a
+              href="#carreras"
+              class="inline-flex items-center justify-center gap-2.5 bg-white hover:bg-sky-50 text-cueto-navy font-display font-extrabold text-base px-7 py-4 rounded-2xl shadow-lg transition-all hover:-translate-y-0.5"
+            >
+              <i class="fa-solid fa-layer-group text-cueto-cobalt"></i>
+              <span>Explorar las 9 Carreras</span>
+            </a>
+
+            <button
+              type="button"
+              onclick="openDirectWhatsApp('Hola IESTP Carlos Cueto Fernandini, deseo información sobre sus 9 carreras profesionales técnicas y el proceso de admisión.')"
+              class="inline-flex items-center justify-center gap-2.5 bg-whatsapp hover:bg-whatsapp-hover text-white font-display font-bold text-base px-7 py-4 rounded-2xl shadow-lg shadow-emerald-950/30 transition-all hover:-translate-y-0.5 cursor-pointer"
+            >
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+              <span>Escribir por WhatsApp</span>
+            </button>
+          </div>
+
+          <!-- Estadísticas Clave -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-4">
+            <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-4">
+              <div class="flex items-center gap-2.5 text-sky-300 mb-1">
+                <i class="fa-solid fa-graduation-cap text-lg"></i>
+                <span class="text-xs font-bold uppercase tracking-wider">Oferta Oficial</span>
+              </div>
+              <p class="font-display font-extrabold text-base sm:text-lg text-white leading-snug">
+                9 Carreras Profesionales Técnicas
+              </p>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-4">
+              <div class="flex items-center gap-2.5 text-sky-300 mb-1">
+                <i class="fa-solid fa-certificate text-lg"></i>
+                <span class="text-xs font-bold uppercase tracking-wider">Grado Oficial</span>
+              </div>
+              <p class="font-display font-extrabold text-base sm:text-lg text-white leading-snug">
+                Título a Nombre de la Nación
+              </p>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-4">
+              <div class="flex items-center gap-2.5 text-sky-300 mb-1">
+                <i class="fa-solid fa-clock text-lg"></i>
+                <span class="text-xs font-bold uppercase tracking-wider">Flexibilidad</span>
+              </div>
+              <p class="font-display font-extrabold text-base sm:text-lg text-white leading-snug">
+                Turnos Diurno y Nocturno
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Tarjeta Destacada con el Escudo Oficial Vectorizado -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="bg-white text-slate-900 rounded-[2rem] p-6 sm:p-8 shadow-crest border-4 border-sky-200/40 max-w-sm w-full text-center relative overflow-hidden">
+            <div class="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-cueto-navy via-cueto-cobalt to-cueto-sky"></div>
+
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 text-cueto-navy font-bold text-[11px] uppercase tracking-wider mb-3 border border-sky-200">
+              <i class="fa-solid fa-shield-halved text-cueto-cobalt"></i>
+              <span>Emblema Institucional Oficial</span>
+            </div>
+
+            <!-- Escudo Ovalado Oficial en SVG de Alta Precisión -->
+            <div id="heroCrestSlot" class="w-52 sm:w-60 mx-auto my-1 flex items-center justify-center drop-shadow-sm">
+              <!-- Inyectado dinámicamente -->
+            </div>
+
+            <div class="mt-3 pt-3 border-t border-slate-100 space-y-1">
+              <p class="font-display font-extrabold text-sm text-cueto-navy">
+                Educación Superior Pública • MINEDU
+              </p>
+              <p class="text-xs text-slate-500">
+                3 años de formación modular (6 ciclos académicos)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       4. CATÁLOGO INTERACTIVO DE LAS 9 CARRERAS OFICIALES
+       ===================================================================== -->
+  <section id="carreras" class="py-16 lg:py-24 bg-cueto-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Encabezado de Sección -->
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-10">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-100 text-cueto-navy font-bold text-xs uppercase tracking-wider">
+          <i class="fa-solid fa-compass text-cueto-cobalt"></i> Programas de Estudio Oficiales
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-cueto-navy">
+          Nuestras 9 Carreras Profesionales Técnicas
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Filtra por área académica o busca tu especialidad para revisar su plan de estudios modular o realizar tu consulta directa por WhatsApp.
+        </p>
+      </div>
+
+      <!-- Barra de Búsqueda y Filtros por Área -->
+      <div class="bg-white rounded-3xl p-4 sm:p-6 shadow-card border border-slate-200/90 mb-8 space-y-4">
+        <div class="flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-4">
+          <!-- Input de Búsqueda en Tiempo Real -->
+          <div class="relative flex-1">
+            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+            <input
+              id="careerSearchInput"
+              type="text"
+              placeholder="Buscar carrera (ej. software, contabilidad, automotriz, laboratorio, metalurgia)..."
+              class="w-full pl-11 pr-10 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-cueto-navy focus:ring-2 focus:ring-cueto-navy/15 transition-all"
+            />
+            <button
+              id="clearSearchBtn"
+              type="button"
+              aria-label="Limpiar búsqueda"
+              class="hidden absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-cueto-navy p-1 cursor-pointer"
+            >
+              <i class="fa-solid fa-circle-xmark"></i>
+            </button>
+          </div>
+
+          <!-- Filtros por Área Exactos -->
+          <div id="areaFilterGroup" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 xl:pb-0" role="tablist" aria-label="Filtrar carreras por área">
+            <button
+              type="button"
+              data-area="Todas"
+              class="filter-btn active whitespace-nowrap px-4 py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all bg-cueto-navy text-white shadow-sm cursor-pointer"
+            >
+              Todas (9)
+            </button>
+            <button
+              type="button"
+              data-area="Ingeniería e Industria"
+              class="filter-btn whitespace-nowrap px-4 py-3 rounded-2xl text-xs sm:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-sky-50 hover:text-cueto-navy cursor-pointer"
+            >
+              Ingeniería e Industria (5)
+            </button>
+            <button
+              type="button"
+              data-area="Tecnología"
+              class="filter-btn whitespace-nowrap px-4 py-3 rounded-2xl text-xs sm:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-sky-50 hover:text-cueto-navy cursor-pointer"
+            >
+              Tecnología (1)
+            </button>
+            <button
+              type="button"
+              data-area="Gestión y Negocios"
+              class="filter-btn whitespace-nowrap px-4 py-3 rounded-2xl text-xs sm:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-sky-50 hover:text-cueto-navy cursor-pointer"
+            >
+              Gestión y Negocios (2)
+            </button>
+            <button
+              type="button"
+              data-area="Salud"
+              class="filter-btn whitespace-nowrap px-4 py-3 rounded-2xl text-xs sm:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-sky-50 hover:text-cueto-navy cursor-pointer"
+            >
+              Salud (1)
+            </button>
+          </div>
+        </div>
+
+        <!-- Contador dinámico -->
+        <div class="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500 pt-2 border-t border-slate-100">
+          <p id="resultsCountText">Mostrando <strong class="text-cueto-navy">9</strong> de 9 carreras profesionales técnicas</p>
+          <span class="inline-flex items-center gap-1.5 text-slate-600 font-medium">
+            <i class="fa-solid fa-award text-cueto-cobalt"></i> Duración: 3 años (6 ciclos) • Título a Nombre de la Nación
+          </span>
+        </div>
+      </div>
+
+      <!-- Grid de las 9 Carreras -->
+      <div id="careersGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Renderizado dinámico por JS -->
+      </div>
+
+      <!-- Estado vacío cuando no hay coincidencias -->
+      <div id="emptyCareersState" class="hidden text-center bg-white rounded-3xl p-12 border border-slate-200 shadow-card max-w-lg mx-auto">
+        <div class="w-16 h-16 rounded-2xl bg-sky-50 text-cueto-cobalt flex items-center justify-center mx-auto mb-4">
+          <i class="fa-solid fa-magnifying-glass text-2xl"></i>
+        </div>
+        <h3 class="font-display font-bold text-xl text-cueto-navy">No encontramos carreras con ese criterio</h3>
+        <p class="text-sm text-slate-500 mt-2">
+          Prueba con otra palabra clave o restablece los filtros para visualizar las 9 carreras oficiales.
+        </p>
+        <button
+          type="button"
+          onclick="resetCareerFilters()"
+          class="mt-5 inline-flex items-center gap-2 bg-cueto-navy hover:bg-cueto-cobalt text-white font-semibold text-sm px-5 py-3 rounded-xl transition-colors cursor-pointer"
+        >
+          <i class="fa-solid fa-rotate-left"></i>
+          <span>Mostrar las 9 carreras</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       5. SECCIÓN ADMISIÓN Y REQUISITOS
+       ===================================================================== -->
+  <section id="admision" class="py-16 lg:py-20 bg-white border-y border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6 space-y-6">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-100 text-cueto-navy font-bold text-xs uppercase tracking-wider">
+            <i class="fa-solid fa-file-signature text-cueto-cobalt"></i> Admisión Institucional
+          </span>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-cueto-navy leading-tight">
+            Postula al IESTP "Carlos Cueto Fernandini"
+          </h2>
+          <p class="text-slate-600 text-base leading-relaxed">
+            Como instituto tecnológico público del Estado peruano, ofrecemos formación profesional técnica sin mensualidades. Contamos con modalidades de ingreso ordinario y por exoneración para jóvenes y trabajadores de Lima Norte.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/90">
+              <div class="w-10 h-10 rounded-xl bg-cueto-navy text-white flex items-center justify-center mb-3">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </div>
+              <h3 class="font-display font-bold text-base text-cueto-navy">Examen Ordinario</h3>
+              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                Dirigido a egresados de educación secundaria (EBR / EBA) que postulan a cualquiera de nuestras 9 carreras.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/90">
+              <div class="w-10 h-10 rounded-xl bg-cueto-cobalt text-white flex items-center justify-center mb-3">
+                <i class="fa-solid fa-medal"></i>
+              </div>
+              <h3 class="font-display font-bold text-base text-cueto-navy">Ingreso por Exoneración</h3>
+              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                Primeros puestos de secundaria, deportistas calificados, servicio militar y personas con discapacidad.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3 pt-1">
+            <button
+              type="button"
+              onclick="openDirectWhatsApp('Hola IESTP Carlos Cueto Fernandini, deseo conocer el cronograma y requisitos del proceso de admisión.')"
+              class="inline-flex items-center gap-2 bg-whatsapp hover:bg-whatsapp-hover text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-md transition-all cursor-pointer"
+            >
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Consultar Admisión por WhatsApp</span>
+            </button>
+            <a
+              href="#consulta-whatsapp"
+              class="inline-flex items-center gap-2 bg-slate-100 hover:bg-sky-50 text-cueto-navy font-bold text-sm px-5 py-3.5 rounded-xl transition-colors"
+            >
+              <span>Personalizar consulta</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Carpeta del Postulante -->
+        <div class="lg:col-span-6">
+          <div class="bg-gradient-to-br from-cueto-navyDark via-cueto-navy to-cueto-cobalt text-white rounded-3xl p-6 sm:p-8 shadow-xl">
+            <div class="flex items-center justify-between mb-6">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wider text-sky-300">Carpeta del Postulante</p>
+                <h3 class="font-display font-extrabold text-2xl mt-0.5">Requisitos de Inscripción</h3>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-white/15 text-xs font-semibold">Comas • Lima</span>
+            </div>
+
+            <ul class="space-y-3.5 text-sm">
+              <li class="flex items-start gap-3.5 bg-white/10 p-3.5 rounded-2xl">
+                <span class="w-6 h-6 rounded-full bg-cueto-sky text-cueto-navyDark font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
+                <div>
+                  <p class="font-bold text-white">Certificado de Estudios Secundarios</p>
+                  <p class="text-xs text-slate-200 mt-0.5">Original visado o Constancia de Logros de Aprendizaje (CLA) emitida por MINEDU.</p>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-3.5 bg-white/10 p-3.5 rounded-2xl">
+                <span class="w-6 h-6 rounded-full bg-cueto-sky text-cueto-navyDark font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">2</span>
+                <div>
+                  <p class="font-bold text-white">Documento Nacional de Identidad (DNI)</p>
+                  <p class="text-xs text-slate-200 mt-0.5">Copia simple legible vigente (o Carné de Extranjería / PTP para postulantes extranjeros).</p>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-3.5 bg-white/10 p-3.5 rounded-2xl">
+                <span class="w-6 h-6 rounded-full bg-cueto-sky text-cueto-navyDark font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">3</span>
+                <div>
+                  <p class="font-bold text-white">Partida de Nacimiento y Fotografía Digital</p>
+                  <p class="text-xs text-slate-200 mt-0.5">Partida original y fotografía tamaño carné con fondo blanco.</p>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-3.5 bg-white/10 p-3.5 rounded-2xl">
+                <span class="w-6 h-6 rounded-full bg-cueto-sky text-cueto-navyDark font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">4</span>
+                <div>
+                  <p class="font-bold text-white">Comprobante de Derecho de Admisión</p>
+                  <p class="text-xs text-slate-200 mt-0.5">Pago único de inscripción en tesorería institucional o cuenta autorizada.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       6. SECCIÓN NOSOTROS (IDENTIDAD Y TRADICIÓN TECNOLÓGICA)
+       ===================================================================== -->
+  <section id="nosotros" class="py-16 lg:py-20 bg-slate-50 border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-soft border border-slate-200/90 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-4 flex flex-col items-center text-center">
+          <div id="aboutCrestSlot" class="w-44 sm:w-48">
+            <!-- Escudo SVG -->
+          </div>
+          <p class="mt-3 text-xs font-extrabold uppercase tracking-widest text-cueto-navy">
+            "Ciencia y Tecnología"
+          </p>
+          <p class="text-[11px] text-slate-500">Lima - Perú</p>
+        </div>
+
+        <div class="lg:col-span-8 space-y-5">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-100 text-cueto-navy font-bold text-xs uppercase tracking-wider">
+            <i class="fa-solid fa-building-columns text-cueto-cobalt"></i> Identidad Institucional
+          </span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-cueto-navy">
+            Referente de la Educación Tecnológica Pública en Lima Norte
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+            El <strong>Instituto de Educación Superior Tecnológico Público "Carlos Cueto Fernandini"</strong>, ubicado en el distrito de Comas (Lima, Perú), forma profesionales técnicos altamente competitivos mediante planes de estudio modulares orientados a la innovación, la industria, la gestión empresarial y la salud.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+            <div class="p-4 rounded-2xl bg-sky-50/70 border border-sky-100">
+              <p class="font-display font-extrabold text-cueto-navy text-sm mb-1">
+                <i class="fa-solid fa-gears text-cueto-cobalt mr-1.5"></i> Enfoque Práctico
+              </p>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Talleres industriales, laboratorios clínicos y centros de cómputo especializados.
+              </p>
+            </div>
+            <div class="p-4 rounded-2xl bg-sky-50/70 border border-sky-100">
+              <p class="font-display font-extrabold text-cueto-navy text-sm mb-1">
+                <i class="fa-solid fa-certificate text-cueto-sky mr-1.5"></i> Certificación Modular
+              </p>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Obtén certificaciones progresivas por cada módulo culminado desde el primer año.
+              </p>
+            </div>
+            <div class="p-4 rounded-2xl bg-sky-50/70 border border-sky-100">
+              <p class="font-display font-extrabold text-cueto-navy text-sm mb-1">
+                <i class="fa-solid fa-handshake text-cueto-navy mr-1.5"></i> Vinculación Laboral
+              </p>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Experiencias formativas en situaciones reales de trabajo en empresas e instituciones.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       7. MÓDULO INTERACTIVO DE CONSULTA Y ENVÍO POR WHATSAPP
+       ===================================================================== -->
+  <section id="consulta-whatsapp" class="py-16 lg:py-24 bg-cueto-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Encabezado -->
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-100 text-whatsapp-dark font-bold text-xs uppercase tracking-wider">
+          <i class="fa-brands fa-whatsapp"></i> Canal Directo de Atención
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-cueto-navy">
+          Consulta y Envío Directo por WhatsApp
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Completa tus datos, observa la vista previa en vivo tipo burbuja de chat y envía tu consulta directamente a nuestro WhatsApp institucional.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Formulario Interactivo -->
+        <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 shadow-soft border border-slate-200/90 space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-2xl bg-cueto-navy text-white flex items-center justify-center">
+                <i class="fa-brands fa-whatsapp text-xl text-whatsapp"></i>
+              </div>
+              <div>
+                <h3 class="font-display font-bold text-lg text-cueto-navy">Generador de Consulta WhatsApp</h3>
+                <p class="text-xs text-slate-500">Personaliza tu mensaje antes de abrir WhatsApp</p>
+              </div>
+            </div>
+          </div>
+
+          <form id="whatsappBuilderForm" class="space-y-5" novalidate>
+            <!-- Nombre Completo del Postulante -->
+            <div>
+              <label for="applicantName" class="block text-sm font-bold text-slate-700 mb-1.5">
+                Nombre completo del postulante <span class="text-red-600">*</span>
+              </label>
+              <div class="relative">
+                <i class="fa-regular fa-user absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                <input
+                  id="applicantName"
+                  type="text"
+                  placeholder="Ej. Luis Alberto Mendoza Quispe"
+                  class="w-full pl-11 pr-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-sm text-slate-800 focus:outline-none focus:bg-white focus:border-cueto-navy focus:ring-2 focus:ring-cueto-navy/15 transition-all"
+                />
+              </div>
+              <p id="nameErrorHint" class="hidden text-xs text-red-600 font-medium mt-1.5">
+                <i class="fa-solid fa-circle-exclamation mr-1"></i> Por favor ingresa tu nombre completo para enviar la consulta.
+              </p>
+            </div>
+
+            <!-- Selección de Carrera (las 9 carreras) -->
+            <div>
+              <label for="applicantCareer" class="block text-sm font-bold text-slate-700 mb-1.5">
+                Selección de Carrera (9 programas oficiales)
+              </label>
+              <div class="relative">
+                <i class="fa-solid fa-graduation-cap absolute left-4 top-1/2 -translate-y-1/2 text-cueto-cobalt"></i>
+                <select
+                  id="applicantCareer"
+                  class="w-full pl-11 pr-10 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-sm text-slate-800 font-medium focus:outline-none focus:bg-white focus:border-cueto-navy focus:ring-2 focus:ring-cueto-navy/15 transition-all appearance-none cursor-pointer"
+                >
+                  <!-- Poblado dinámicamente con las 9 carreras exactas -->
+                </select>
+                <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none text-xs"></i>
+              </div>
+            </div>
+
+            <!-- Turno Preferido y Motivo de Consulta -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Turno Preferido -->
+              <div>
+                <span class="block text-sm font-bold text-slate-700 mb-1.5">Turno preferido</span>
+                <div class="grid grid-cols-2 gap-2.5" role="radiogroup" aria-label="Turno preferido">
+                  <label class="cursor-pointer">
+                    <input type="radio" name="applicantShift" value="Diurno" checked class="peer sr-only" />
+                    <div class="p-3 rounded-2xl border border-slate-200 bg-slate-50 text-center peer-checked:bg-cueto-navy peer-checked:text-white peer-checked:border-cueto-navy transition-all">
+                      <i class="fa-solid fa-sun text-cueto-sky block mb-1"></i>
+                      <span class="text-xs font-bold block">Diurno</span>
+                      <span class="text-[10px] opacity-80 block">Mañana / Tarde</span>
+                    </div>
+                  </label>
+
+                  <label class="cursor-pointer">
+                    <input type="radio" name="applicantShift" value="Nocturno" class="peer sr-only" />
+                    <div class="p-3 rounded-2xl border border-slate-200 bg-slate-50 text-center peer-checked:bg-cueto-navy peer-checked:text-white peer-checked:border-cueto-navy transition-all">
+                      <i class="fa-solid fa-moon text-cueto-sky block mb-1"></i>
+                      <span class="text-xs font-bold block">Nocturno</span>
+                      <span class="text-[10px] opacity-80 block">18:00 - 22:30</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Motivo de Consulta -->
+              <div>
+                <label for="applicantReason" class="block text-sm font-bold text-slate-700 mb-1.5">
+                  Motivo de consulta
+                </label>
+                <div class="relative">
+                  <i class="fa-solid fa-list-check absolute left-4 top-1/2 -translate-y-1/2 text-cueto-sky"></i>
+                  <select
+                    id="applicantReason"
+                    class="w-full pl-11 pr-10 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-sm text-slate-800 font-medium focus:outline-none focus:bg-white focus:border-cueto-navy focus:ring-2 focus:ring-cueto-navy/15 transition-all appearance-none cursor-pointer"
+                  >
+                    <option value="Admisión y requisitos">Admisión y requisitos</option>
+                    <option value="Horarios y turnos">Horarios y turnos</option>
+                    <option value="Convalidaciones">Convalidaciones</option>
+                    <option value="Información general">Información general</option>
+                  </select>
+                  <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none text-xs"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Consulta Adicional -->
+            <div>
+              <label for="applicantNotes" class="block text-sm font-bold text-slate-700 mb-1.5">
+                Consulta adicional <span class="text-xs font-normal text-slate-400">(opcional)</span>
+              </label>
+              <textarea
+                id="applicantNotes"
+                rows="3"
+                placeholder="Escribe aquí cualquier detalle adicional sobre vacantes, examen ordinario, exoneración o plan de estudios..."
+                class="w-full px-4 py-3 rounded-2xl bg-slate-50 border border-slate-200 text-sm text-slate-800 focus:outline-none focus:bg-white focus:border-cueto-navy focus:ring-2 focus:ring-cueto-navy/15 transition-all resize-none"
+              ></textarea>
+            </div>
+
+            <!-- Panel Desplegable: Configurar número WhatsApp de destino -->
+            <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50/80">
+              <button
+                id="togglePhoneConfigBtn"
+                type="button"
+                aria-expanded="false"
+                class="w-full px-4 py-3.5 flex items-center justify-between text-left text-xs sm:text-sm font-semibold text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer"
+              >
+                <span class="inline-flex items-center gap-2">
+                  <i class="fa-solid fa-gear text-cueto-navy"></i>
+                  <span>Configurar número WhatsApp de destino</span>
+                  <span id="activeTargetBadge" class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-whatsapp-dark font-mono text-[11px]">
+                    +51 987 654 321
+                  </span>
+                </span>
+                <i id="phoneConfigChevron" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+              </button>
+
+              <div id="phoneConfigPanel" class="hidden px-4 pb-4 pt-3 border-t border-slate-200 bg-white space-y-3">
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Ingresa cualquier número real de WhatsApp (incluyendo el código de país <strong class="text-cueto-navy">+51</strong> de Perú) para probar el envío inmediato:
+                </p>
+                <div class="flex flex-col sm:flex-row gap-2">
+                  <div class="relative flex-1">
+                    <i class="fa-brands fa-whatsapp absolute left-3.5 top-1/2 -translate-y-1/2 text-whatsapp text-base"></i>
+                    <input
+                      id="customWhatsAppNumber"
+                      type="tel"
+                      value="+51 987 654 321"
+                      placeholder="+51 999 888 777"
+                      class="w-full pl-10 pr-3 py-2.5 rounded-xl border border-slate-300 text-sm font-mono text-slate-800 focus:outline-none focus:border-whatsapp-dark"
+                    />
+                  </div>
+                  <button
+                    type="button"
+                    onclick="resetWhatsAppNumber()"
+                    class="px-3.5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition-colors cursor-pointer"
+                  >
+                    Restaurar número
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Botones de Acción: Enviar por WhatsApp ahora + Copiar mensaje -->
+            <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 pt-1">
+              <button
+                type="submit"
+                class="sm:col-span-8 inline-flex items-center justify-center gap-2.5 bg-whatsapp hover:bg-whatsapp-hover text-white font-display font-bold text-sm sm:text-base py-4 px-6 rounded-2xl shadow-lg shadow-emerald-600/25 hover:shadow-whatsapp transition-all active:scale-[0.99] cursor-pointer"
+              >
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span>Enviar por WhatsApp ahora</span>
+              </button>
+
+              <button
+                type="button"
+                onclick="copyPreviewMessage()"
+                class="sm:col-span-4 inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-cueto-navy text-cueto-navy hover:text-white font-display font-bold text-sm py-4 px-4 rounded-2xl border border-slate-200 transition-colors cursor-pointer"
+              >
+                <i class="fa-regular fa-copy"></i>
+                <span>Copiar mensaje</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Columna Derecha: Vista Previa en Vivo tipo Burbuja de Chat de WhatsApp -->
+        <div class="lg:col-span-5 lg:sticky lg:top-28">
+          <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-200 bg-white">
+            <!-- Cabecera Estilo WhatsApp -->
+            <div class="bg-[#075E54] text-white px-5 py-4 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-white text-cueto-navy flex items-center justify-center font-display font-extrabold text-xs shadow">
+                  CCF
+                </div>
+                <div>
+                  <p class="font-display font-bold text-sm leading-tight">IESTP "Carlos Cueto Fernandini"</p>
+                  <p class="text-[11px] text-emerald-200 flex items-center gap-1.5 mt-0.5">
+                    <span class="w-2 h-2 rounded-full bg-whatsapp inline-block"></span>
+                    Vista previa en vivo
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onclick="copyPreviewMessage()"
+                title="Copiar mensaje"
+                class="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold inline-flex items-center gap-1.5 transition-colors cursor-pointer"
+              >
+                <i class="fa-regular fa-copy"></i>
+                <span>Copiar</span>
+              </button>
+            </div>
+
+            <!-- Lienzo de Chat WhatsApp -->
+            <div class="wa-chat-canvas p-5 sm:p-6 min-h-[340px] flex flex-col justify-between space-y-4">
+              <div class="self-center bg-white/90 backdrop-blur-sm text-slate-600 text-[11px] px-3 py-1 rounded-lg shadow-sm border border-black/5 text-center">
+                <i class="fa-solid fa-lock text-[10px] text-slate-400 mr-1"></i>
+                Mensaje formateado listo para <strong>wa.me</strong>
+              </div>
+
+              <!-- Burbuja Institucional -->
+              <div class="self-start max-w-[85%] bg-white rounded-2xl rounded-tl-none px-4 py-3 shadow-sm border border-black/5">
+                <p class="text-xs font-bold text-whatsapp-dark mb-0.5">Admisión • Ciencia y Tecnología</p>
+                <p class="text-xs text-slate-700 leading-relaxed">
+                  ¡Hola! Completa tus datos a la izquierda y presiona <strong>Enviar por WhatsApp ahora</strong> para iniciar tu atención personalizada.
+                </p>
+                <span class="block text-right text-[10px] text-slate-400 mt-1">08:00</span>
+              </div>
+
+              <!-- Burbuja Saliente Actualizada en Tiempo Real -->
+              <div class="self-end max-w-[92%] bg-whatsapp-bubble rounded-2xl rounded-tr-none px-4 py-3.5 shadow-sm border border-emerald-300/60">
+                <pre id="whatsappLivePreview" class="font-sans text-[13px] text-slate-800 whitespace-pre-wrap leading-relaxed break-words"></pre>
+                <div class="flex items-center justify-end gap-1 mt-1.5">
+                  <span id="previewTimestamp" class="text-[10px] text-slate-500">Ahora</span>
+                  <i class="fa-solid fa-check-double text-[11px] text-sky-500"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pie de Vista Previa -->
+            <div class="bg-[#F0F2F5] px-4 py-3 border-t border-slate-200 flex items-center justify-between text-xs text-slate-600">
+              <span>Destino: <strong id="footerPreviewPhone" class="text-cueto-navy font-mono">+51 987 654 321</strong></span>
+              <span class="text-whatsapp-dark font-bold"><i class="fa-solid fa-circle-check mr-1"></i>Conectado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       8. PIE DE PÁGINA INSTITUCIONAL CON ESCUDO OFICIAL
+       ===================================================================== -->
+  <footer class="bg-cueto-navyDark text-slate-300 pt-16 pb-10 border-t-4 border-cueto-sky">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+        <!-- Columna 1: Escudo Oficial e Identidad -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3.5 bg-white/5 p-3.5 rounded-2xl border border-white/10">
+            <div id="footerCrestSlot" class="w-14 h-20 shrink-0 flex items-center justify-center bg-white rounded-xl p-1">
+              <!-- Escudo SVG -->
+            </div>
+            <div>
+              <p class="text-[11px] font-bold uppercase tracking-wider text-sky-300">IESTP Público</p>
+              <h3 class="font-display font-extrabold text-base text-white leading-tight">
+                "Carlos Cueto Fernandini"
+              </h3>
+              <p class="text-xs text-sky-200 font-semibold mt-0.5">Ciencia y Tecnología • Lima - Perú</p>
+            </div>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Institución de Educación Superior Tecnológico Público al servicio de la juventud de Lima Norte, formando profesionales técnicos con Título a Nombre de la Nación.
+          </p>
+          <div class="flex items-center gap-3 pt-1">
+            <button
+              type="button"
+              onclick="openDirectWhatsApp('Hola IESTP Carlos Cueto Fernandini, me comunico desde su página web institucional.')"
+              class="inline-flex items-center gap-2 bg-whatsapp hover:bg-whatsapp-hover text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-colors cursor-pointer"
+            >
+              <i class="fa-brands fa-whatsapp text-base"></i>
+              <span>WhatsApp Oficial</span>
+            </button>
+            <a
+              href="#inicio"
+              class="inline-flex items-center gap-1.5 bg-white/10 hover:bg-white/20 text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition-colors"
+            >
+              <i class="fa-solid fa-arrow-up"></i>
+              <span>Inicio</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Las 9 Carreras Oficiales -->
+        <div class="lg:col-span-5 space-y-4">
+          <h4 class="font-display font-bold text-white text-base flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-cueto-sky"></span>
+            Las 9 Carreras Profesionales Técnicas
+          </h4>
+          <ul id="footerCareersList" class="grid grid-cols-1 gap-2 text-xs sm:text-sm">
+            <!-- Poblado dinámicamente -->
+          </ul>
+        </div>
+
+        <!-- Columna 3: Contacto e Informes -->
+        <div class="lg:col-span-3 space-y-4">
+          <h4 class="font-display font-bold text-white text-base flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-cueto-cobalt"></span>
+            Sede Institucional
+          </h4>
+          <ul class="space-y-3.5 text-sm">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot text-cueto-sky mt-1 shrink-0"></i>
+              <span>Av. Túpac Amaru s/n Km. 8 1/2, Comas, Lima - Perú</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-phone text-cueto-sky shrink-0"></i>
+              <span>Central: <strong class="text-white">(01) 680-4480</strong></span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-envelope text-cueto-sky mt-1 shrink-0"></i>
+              <div class="space-y-0.5 break-all text-xs">
+                <a href="mailto:informes@carloscueto.edu.pe" class="block hover:text-sky-300 transition-colors">informes@carloscueto.edu.pe</a>
+                <a href="mailto:info.admision@carloscueto.edu.pe" class="block hover:text-sky-300 transition-colors">info.admision@carloscueto.edu.pe</a>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-regular fa-clock text-cueto-sky mt-1 shrink-0"></i>
+              <span class="text-xs">Turnos Diurno y Nocturno<br /><strong class="text-white">Lun - Vie: 08:00 a 22:30 hrs</strong></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <p>© 2026 IESTP "Carlos Cueto Fernandini" — Lima, Perú. Todos los derechos reservados.</p>
+        <p class="text-sky-300/80 font-semibold">Ciencia y Tecnología • Educación Superior Tecnológica Pública</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       9. MODAL DETALLADO DE PLAN DE ESTUDIOS Y PERFIL DEL EGRESADO
+       ===================================================================== -->
+  <div
+    id="careerDetailModal"
+    class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-6 bg-slate-950/75 backdrop-blur-sm"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalCareerTitle"
+  >
+    <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] flex flex-col overflow-hidden shadow-2xl border border-slate-200">
+      <!-- Cabecera Modal -->
+      <div class="bg-gradient-to-r from-cueto-navyDark via-cueto-navy to-cueto-cobalt text-white px-6 py-5 flex items-start justify-between gap-4 shrink-0">
+        <div class="space-y-1.5">
+          <span id="modalCareerArea" class="inline-block px-3 py-0.5 rounded-full bg-cueto-sky/20 text-sky-200 border border-sky-300/30 text-xs font-bold">
+            Área Académica • 3 años (6 ciclos)
+          </span>
+          <h3 id="modalCareerTitle" class="font-display font-extrabold text-xl sm:text-2xl leading-snug">
+            Nombre de la Carrera
+          </h3>
+        </div>
+        <button
+          type="button"
+          onclick="closeCareerModal()"
+          aria-label="Cerrar ventana"
+          class="w-10 h-10 rounded-xl bg-white/10 hover:bg-white/25 text-white flex items-center justify-center shrink-0 transition-colors cursor-pointer"
+        >
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Cuerpo Modal -->
+      <div id="modalCareerBody" class="p-6 sm:p-7 overflow-y-auto space-y-6 text-sm text-slate-700">
+        <!-- Contenido dinámico -->
+      </div>
+
+      <!-- Pie Modal -->
+      <div class="bg-slate-50 px-6 py-4 border-t border-slate-200 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 shrink-0">
+        <button
+          id="modalSelectFormBtn"
+          type="button"
+          class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-cueto-navy text-cueto-navy hover:bg-cueto-navy hover:text-white font-bold text-xs sm:text-sm transition-colors cursor-pointer"
+        >
+          <i class="fa-solid fa-pen-ruler"></i>
+          <span>Preseleccionar en Formulario</span>
+        </button>
+
+        <button
+          id="modalWhatsAppBtn"
+          type="button"
+          class="inline-flex items-center justify-center gap-2.5 bg-whatsapp hover:bg-whatsapp-hover text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-md transition-all cursor-pointer"
+        >
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Consultar por WhatsApp</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       10. WIDGET FLOTANTE DE WHATSAPP (ESQUINA INFERIOR DERECHA)
+       ===================================================================== -->
+  <div class="fixed bottom-5 right-5 z-50 flex flex-col items-end">
+    <!-- Ventana de Chat Rápido -->
+    <div
+      id="floatingChatWindow"
+      class="hidden mb-3 w-[calc(100vw-2.5rem)] sm:w-96 rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-white transition-all"
+      role="region"
+      aria-label="Asesoría Rápida WhatsApp"
+    >
+      <!-- Cabecera del Widget -->
+      <div class="bg-[#075E54] text-white px-4 py-3.5 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="relative">
+            <div class="w-10 h-10 rounded-full bg-white text-cueto-navy flex items-center justify-center font-display font-extrabold text-xs">
+              CCF
+            </div>
+            <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-whatsapp border-2 border-[#075E54]"></span>
+          </div>
+          <div>
+            <p class="font-display font-bold text-xs sm:text-sm leading-tight">IESTP "Carlos Cueto Fernandini"</p>
+            <p class="text-[11px] text-emerald-200 mt-0.5">En línea • Ciencia y Tecnología</p>
+          </div>
+        </div>
+        <button
+          type="button"
+          onclick="toggleFloatingWidget(false)"
+          aria-label="Minimizar chat"
+          class="p-1.5 rounded-lg hover:bg-white/10 text-white transition-colors cursor-pointer"
+        >
+          <i class="fa-solid fa-minus"></i>
+        </button>
+      </div>
+
+      <!-- Historial y Preguntas Frecuentes Clicables -->
+      <div id="widgetMessagesArea" class="wa-chat-canvas p-4 h-72 overflow-y-auto space-y-3 text-xs">
+        <div class="bg-white rounded-2xl rounded-tl-none p-3 shadow-sm border border-black/5 max-w-[90%]">
+          <p class="font-bold text-whatsapp-dark mb-1">Asesoría Institucional CCF</p>
+          <p class="text-slate-700 leading-relaxed">
+            ¡Bienvenido! Elige una consulta rápida o escribe tu mensaje abajo para enviarlo directamente a nuestro WhatsApp:
+          </p>
+        </div>
+
+        <!-- Preguntas Frecuentes Clicables Exactas -->
+        <div class="flex flex-wrap gap-1.5 pt-1">
+          <button
+            type="button"
+            onclick="handleWidgetQuickReply('carreras')"
+            class="px-3 py-1.5 rounded-full bg-white hover:bg-emerald-50 text-cueto-navy font-semibold border border-emerald-300 shadow-sm text-[11px] transition-colors cursor-pointer text-left"
+          >
+            Ver las 9 carreras
+          </button>
+          <button
+            type="button"
+            onclick="handleWidgetQuickReply('requisitos')"
+            class="px-3 py-1.5 rounded-full bg-white hover:bg-emerald-50 text-cueto-navy font-semibold border border-emerald-300 shadow-sm text-[11px] transition-colors cursor-pointer text-left"
+          >
+            Requisitos de admisión
+          </button>
+          <button
+            type="button"
+            onclick="handleWidgetQuickReply('turnos')"
+            class="px-3 py-1.5 rounded-full bg-white hover:bg-emerald-50 text-cueto-navy font-semibold border border-emerald-300 shadow-sm text-[11px] transition-colors cursor-pointer text-left"
+          >
+            Turnos disponibles
+          </button>
+          <button
+            type="button"
+            onclick="handleWidgetQuickReply('ubicacion')"
+            class="px-3 py-1.5 rounded-full bg-white hover:bg-emerald-50 text-cueto-navy font-semibold border border-emerald-300 shadow-sm text-[11px] transition-colors cursor-pointer text-left"
+          >
+            Ubicación en Lima
+          </button>
+        </div>
+      </div>
+
+      <!-- Campo de Texto Libre conectado a WhatsApp -->
+      <form id="widgetFreeTextForm" class="bg-[#F0F2F5] p-3 border-t border-slate-200 flex items-center gap-2">
+        <input
+          id="widgetInput"
+          type="text"
+          placeholder="Escribe tu consulta para WhatsApp..."
+          class="flex-1 px-3.5 py-2.5 rounded-full bg-white border border-slate-200 text-xs text-slate-800 focus:outline-none focus:border-whatsapp-dark"
+        />
+        <button
+          type="submit"
+          aria-label="Enviar mensaje por WhatsApp"
+          class="w-10 h-10 rounded-full bg-whatsapp hover:bg-whatsapp-hover text-white flex items-center justify-center shrink-0 shadow transition-colors cursor-pointer"
+        >
+          <i class="fa-solid fa-paper-plane text-xs"></i>
+        </button>
+      </form>
+    </div>
+
+    <!-- Botón Flotante Verde -->
+    <button
+      id="floatingWaTrigger"
+      type="button"
+      onclick="toggleFloatingWidget()"
+      aria-label="Abrir chat rápido de WhatsApp"
+      class="wa-pulse relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-whatsapp hover:bg-whatsapp-hover text-white flex items-center justify-center shadow-whatsapp transition-transform hover:scale-105 active:scale-95 cursor-pointer"
+    >
+      <i id="floatingWaIcon" class="fa-brands fa-whatsapp text-3xl sm:text-4xl"></i>
+      <span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-cueto-navy text-white text-[10px] font-extrabold flex items-center justify-center border-2 border-white">
+        1
+      </span>
+    </button>
+  </div>
+
+  <!-- Contenedor de Notificaciones Toast -->
+  <div
+    id="toastContainer"
+    class="fixed bottom-24 left-4 right-4 sm:left-6 sm:right-auto sm:max-w-md z-50 pointer-events-none space-y-2"
+    aria-live="polite"
+  ></div>
+
+  <!-- =====================================================================
+       11. JAVASCRIPT: ESCUDO SVG DE ALTA PRECISIÓN, CATÁLOGO Y WHATSAPP
+       ===================================================================== -->
+  <script>
+    /**
+     * GENERADOR DEL ESCUDO OVALADO OFICIAL EN SVG DE ALTA PRECISIÓN
+     * Recrea fielmente:
+     * - Óvalo vertical con doble borde azul marino (#082470) y fondo blanco (#FFFFFF).
+     * - Textos arqueados exteriores: "INSTITUTO DE EDUCACIÓN SUPERIOR TECNOLÓGICO PÚBLICO"
+     *   y '"CARLOS CUETO FERNANDINI"'.
+     * - Textos arqueados interiores: "CIENCIA Y TECNOLOGÍA" y "LIMA - PERÚ".
+     * - Emblema superior central: engranaje dividido (mitad izquierda #082470, mitad derecha #0EA5E9),
+     *   antorcha clásica con llama, compás técnico y libro abierto en la base.
+     * - Monograma central "ccf" con degradado metálico azul real (#082470 a #2B59C3),
+     *   con dientes de engranaje en el contorno curvo exterior izquierdo de ambas "c"
+     *   y la letra "f" alta a la derecha.
+     */
+    function buildOfficialCrestSVG(uid, ariaLabel = 'Escudo Oficial IESTP Carlos Cueto Fernandini') {
+      // Generar los dientes de engranaje para el emblema superior (mitad izq navy, mitad der celeste)
+      const topGearCenter = { x: 160, y: 125 };
+      const topTeethCount = 12;
+      let leftGearTeeth = '';
+      let rightGearTeeth = '';
+      for (let i = 0; i < topTeethCount; i++) {
+        const angleDeg = i * (360 / topTeethCount) + 15;
+        const isLeft = angleDeg > 90 && angleDeg < 270;
+        const toothRect = `<rect x="157.5" y="100.5" width="5" height="6.5" rx="1" transform="rotate(${angleDeg} ${topGearCenter.x} ${topGearCenter.y})" />`;
+        if (isLeft) {
+          leftGearTeeth += toothRect;
+        } else {
+          rightGearTeeth += toothRect;
+        }
+      }
+
+      // Generar los 7 dientes de engranaje exteriores izquierdos para cada letra "c"
+      function generateGearCPath(cx, cy) {
+        const teethAngles = [122, 141, 160, 179, 198, 217, 236];
+        const teethSvg = teethAngles
+          .map((deg) => {
+            return `<rect x="${cx - 43}" y="${cy - 4.2}" width="9" height="8.4" rx="1.4" transform="rotate(${deg + 180} ${cx} ${cy})" />`;
+          })
+          .join('');
+        // Arco grueso de la letra "c" (desde -48° hasta +48° dejando la apertura derecha limpia)
+        const cBody = `
+          <path d="M ${cx + 23},${cy - 26}
+                   A 35,35 0 1,0 ${cx + 23},${cy + 26}
+                   L ${cx + 12},${cy + 14}
+                   A 18,18 0 1,1 ${cx + 12},${cy - 14}
+                   Z" />
+        `;
+        return `${teethSvg}${cBody}`;
+      }
+
+      return `
+        <svg viewBox="0 0 320 430" class="w-full h-auto select-none" role="img" aria-label="${ariaLabel}" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <!-- Degradado metálico azul real (#082470 a #2B59C3) para monograma "ccf" -->
+            <linearGradient id="${uid}-ccf-metal" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#082470" />
+              <stop offset="32%" stop-color="#2B59C3" />
+              <stop offset="55%" stop-color="#1D4ED8" />
+              <stop offset="82%" stop-color="#4F83F1" />
+              <stop offset="100%" stop-color="#082470" />
+            </linearGradient>
+
+            <linearGradient id="${uid}-f-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#1D4ED8" />
+              <stop offset="50%" stop-color="#082470" />
+              <stop offset="100%" stop-color="#05184C" />
+            </linearGradient>
+
+            <!-- Rutas curvas para los 4 textos institucionales arqueados -->
+            <path id="${uid}-outer-top" d="M 38,215 A 122,174 0 1,1 282,215" />
+            <path id="${uid}-outer-bottom" d="M 34,218 A 126,177 0 0,0 286,218" />
+            <path id="${uid}-inner-top" d="M 68,212 A 92,136 0 1,1 252,212" />
+            <path id="${uid}-inner-bottom" d="M 67,220 A 93,136 0 0,0 253,220" />
+          </defs>
+
+          <!-- Óvalo Exterior con Doble Borde Azul Marino (#082470) y Fondo Blanco (#FFFFFF) -->
+          <ellipse cx="160" cy="215" rx="149" ry="205" fill="#FFFFFF" stroke="#082470" stroke-width="6.5" />
+          <ellipse cx="160" cy="215" rx="140" ry="195" fill="none" stroke="#082470" stroke-width="2.2" />
+
+          <!-- Óvalo Interior que enmarca los lemas y el monograma -->
+          <ellipse cx="160" cy="215" rx="108" ry="156" fill="none" stroke="#082470" stroke-width="2.4" />
+
+          <!-- Texto Arqueado Superior Exterior -->
+          <text fill="#082470" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11.1" font-weight="800" letter-spacing="0.55">
+            <textPath href="#${uid}-outer-top" startOffset="50%" text-anchor="middle">
+              INSTITUTO DE EDUCACIÓN SUPERIOR TECNOLÓGICO PÚBLICO
+            </textPath>
+          </text>
+
+          <!-- Texto Arqueado Inferior Exterior -->
+          <text fill="#082470" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="12.6" font-weight="800" letter-spacing="1.1">
+            <textPath href="#${uid}-outer-bottom" startOffset="50%" text-anchor="middle">
+              "CARLOS CUETO FERNANDINI"
+            </textPath>
+          </text>
+
+          <!-- Texto Arqueado Superior Interior: CIENCIA Y TECNOLOGÍA -->
+          <text fill="#082470" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11.2" font-weight="800" letter-spacing="0.85">
+            <textPath href="#${uid}-inner-top" startOffset="50%" text-anchor="middle">
+              CIENCIA Y TECNOLOGÍA
+            </textPath>
+          </text>
+
+          <!-- Texto Arqueado Inferior Interior: LIMA - PERÚ -->
+          <text fill="#082470" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11.6" font-weight="800" letter-spacing="1.15">
+            <textPath href="#${uid}-inner-bottom" startOffset="50%" text-anchor="middle">
+              LIMA - PERÚ
+            </textPath>
+          </text>
+
+          <!-- ===============================================================
+               EMBLEMA SUPERIOR CENTRAL:
+               Engranaje dividido (izq #082470, der #0EA5E9), antorcha con llama,
+               compás técnico y libro abierto en la base
+               =============================================================== -->
+          <g>
+            <!-- Mitad Izquierda del Engranaje (#082470) -->
+            <g fill="#082470">
+              ${leftGearTeeth}
+              <path d="M 160,104 A 21,21 0 0,0 160,146 L 160,139 A 14,14 0 0,1 160,111 Z" />
+            </g>
+
+            <!-- Mitad Derecha del Engranaje (#0EA5E9) -->
+            <g fill="#0EA5E9">
+              ${rightGearTeeth}
+              <path d="M 160,104 A 21,21 0 0,1 160,146 L 160,139 A 14,14 0 0,0 160,111 Z" />
+            </g>
+
+            <!-- Antorcha Clásica con Llama en la parte superior -->
+            <g>
+              <!-- Mango y pebetero de la antorcha -->
+              <polygon points="157.5,103 162.5,103 161.2,135 158.8,135" fill="#082470" />
+              <path d="M 153,99 L 167,99 L 164.5,104 L 155.5,104 Z" fill="#082470" />
+              <rect x="152" y="97.2" width="16" height="2.2" rx="1" fill="#082470" />
+              <!-- Llama estilizada -->
+              <path d="M 160,77 C 154,84 152,91 155.5,96.5 C 157,94 157.5,91.5 159,90 C 158,93 159,95.5 160.5,96.8 C 164.5,95.5 167.5,89 164,83 C 163.2,85 162,86 161.5,86.5 C 162.5,83 161.5,79.5 160,77 Z" fill="#082470" />
+              <path d="M 160,82 C 157.5,86.5 157,91.5 159.5,95.5 C 162,93.5 163,89 160,82 Z" fill="#0EA5E9" />
+            </g>
+
+            <!-- Libro Abierto en la base -->
+            <g>
+              <path d="M 160,141 C 151,137.5 140,138 131,142.5 L 134,147.5 C 142,143.5 151,143 160,146.5 C 169,143 178,143.5 186,147.5 L 189,142.5 C 180,138 169,137.5 160,141 Z" fill="#FFFFFF" stroke="#082470" stroke-width="1.8" stroke-linejoin="round" />
+              <line x1="160" y1="141" x2="160" y2="146.5" stroke="#082470" stroke-width="1.6" />
+            </g>
+
+            <!-- Compás Técnico (straddling el engranaje y libro) -->
+            <g stroke="#082470" stroke-width="2" stroke-linecap="round" fill="none">
+              <circle cx="160" cy="112" r="2.6" fill="#FFFFFF" />
+              <line x1="158.5" y1="114.5" x2="145" y2="152" />
+              <line x1="161.5" y1="114.5" x2="175" y2="152" />
+              <line x1="151" y1="133" x2="169" y2="133" stroke-width="1.6" />
+            </g>
+          </g>
+
+          <!-- ===============================================================
+               MONOGRAMA CENTRAL "ccf" CON ENGRANAJES Y DEGRADADO METÁLICO
+               =============================================================== -->
+          <g>
+            <!-- Primera "c" (izquierda) con 7 dientes de engranaje exteriores -->
+            <g fill="url(#${uid}-ccf-metal)">
+              ${generateGearCPath(106, 223)}
+            </g>
+
+            <!-- Segunda "c" (centro, escalonada hacia abajo) con 7 dientes de engranaje -->
+            <g fill="url(#${uid}-ccf-metal)">
+              ${generateGearCPath(162, 255)}
+            </g>
+
+            <!-- Letra "f" alta a la derecha -->
+            <path d="M 197,295
+                     L 197,230
+                     L 190,230
+                     L 190,213
+                     L 197,213
+                     L 197,194
+                     C 197,172 210,161 232,161
+                     C 237,161 241,161.8 244,162.8
+                     L 244,180
+                     C 240,178.8 236,178.2 231,178.2
+                     C 221,178.2 216,183.5 216,194
+                     L 216,213
+                     L 234,213
+                     L 234,230
+                     L 216,230
+                     L 216,295
+                     Z"
+                  fill="url(#${uid}-f-grad)" />
+          </g>
+        </svg>
+      `;
+    }
+
+    /**
+     * BASE DE DATOS DE LAS 9 CARRERAS OFICIALES EXACTAS
+     * Incluye los nombres y descripciones exactas solicitadas, áreas de filtro,
+     * duración (3 años / 6 ciclos), perfil del egresado, módulos por año y campo laboral.
+     */
+    const CAREERS_DATA = [
+      {
+        id: 1,
+        name: "Arquitectura de Plataformas y Servicios de Tecnologías de Información",
+        area: "Tecnología",
+        icon: "fa-server",
+        keywords: "software redes soporte tecnico programacion web servidores cloud base de datos ti sistemas",
+        description: "Forma especialistas en desarrollo de software, redes y soporte técnico.",
+        profile: "El Profesional Técnico en Arquitectura de Plataformas y Servicios de Tecnologías de Información diseña, implementa y administra infraestructuras de redes, servidores, bases de datos y aplicaciones de software multiplataforma con altos estándares de calidad y ciberseguridad.",
+        modules: [
+          {
+            year: "1° Año (Ciclos I y II)",
+            title: "Módulo I: Soporte Técnico y Administración de Redes",
+            units: ["Arquitectura de Computadoras y Ensamblaje", "Redes de Comunicación y Conectividad", "Sistemas Operativos", "Soporte Técnico y Mesa de Ayuda"]
+          },
+          {
+            year: "2° Año (Ciclos III y IV)",
+            title: "Módulo II: Desarrollo de Software y Base de Datos",
+            units: ["Modelamiento y Gestión de Base de Datos", "Programación Orientada a Objetos", "Desarrollo de Aplicaciones Web", "Análisis y Diseño de Sistemas"]
+          },
+          {
+            year: "3° Año (Ciclos V y VI)",
+            title: "Módulo III: Servicios Cloud y Seguridad Informática",
+            units: ["Administración de Servidores y Virtualización", "Servicios en la Nube (Cloud)", "Seguridad Informática", "Gestión de Proyectos TI"]
+          }
+        ],
+        workplaces: [
+          "Áreas de Soporte TI, Redes e Infraestructura en empresas públicas y privadas",
+          "Empresas de desarrollo de software y soluciones web",
+          "Proveedores de telecomunicaciones y centros de datos",
+          "Consultoría independiente en servicios tecnológicos"
+        ]
+      },
+      {
+        id: 2,
+        name: "Contabilidad",
+        area: "Gestión y Negocios",
+        icon: "fa-calculator",
+        keywords: "financiera tributaria contable empresas publicas privadas sunat auditoria costos finanzas",
+        description: "Prepara profesionales para la gestión financiera, tributaria y contable de empresas públicas y privadas.",
+        profile: "El Profesional Técnico en Contabilidad registra, analiza y valida operaciones económicas, tributarias y financieras aplicando las Normas Internacionales de Información Financiera (NIIF) y la legislación tributaria y laboral vigente en el Perú.",
+        modules: [
+          {
+            year: "1° Año (Ciclos I y II)",
+            title: "Módulo I: Procesos Contables Básicos",
+            units: ["Contabilidad General y Plan Contable", "Documentación Comercial y Bancaria", "Legislación Comercial y Laboral", "Matemática Financiera"]
+          },
+          {
+            year: "2° Año (Ciclos III y IV)",
+            title: "Módulo II: Contabilidad Pública, Privada y Tributación",
+            units: ["Contabilidad de Sociedades", "Legislación Tributaria (SUNAT)", "Contabilidad de Costos", "Software Contable"]
+          },
+          {
+            year: "3° Año (Ciclos V y VI)",
+            title: "Módulo III: Análisis Financiero y Auditoría",
+            units: ["Formulación y Análisis de Estados Financieros", "Contabilidad Gubernamental (SIAF)", "Fundamentos de Auditoría", "Proyectos de Inversión"]
+          }
+        ],
+        workplaces: [
+          "Estudios contables y firmas de asesoría tributaria y auditoría",
+          "Departamentos de contabilidad, tesorería y costos en empresas privadas",
+          "Entidades públicas (municipalidades, ministerios, hospitales)",
+          "Asesoría contable independiente para emprendedores y MYPES"
+        ]
+      },
+      {
+        id: 3,
+        name: "Gestión Administrativa",
+        area: "Gestión y Negocios",
+        icon: "fa-briefcase",
+        keywords: "procesos organizacionales logistica recursos humanos atencion al cliente administracion empresas",
+        description: "Capacita en procesos organizacionales, logística, recursos humanos y atención al cliente.",
+        profile: "El Profesional Técnico en Gestión Administrativa planifica, organiza y ejecuta operaciones administrativas, cadena logística, gestión del talento humano y atención integral al cliente para mejorar la competitividad organizacional.",
+        modules: [
+          {
+            year: "1° Año (Ciclos I y II)",
+            title: "Módulo I: Procesos Organizacionales y Oficina",
+            units: ["Administración y Organización Empresarial", "Ofimática Gerencial", "Gestión Documentaria", "Comunicación Efectiva y Atención al Cliente"]
+          },
+          {
+            year: "2° Año (Ciclos III y IV)",
+            title: "Módulo II: Logística y Recursos Humanos",
+            units: ["Gestión Logística, Compras e Inventarios", "Administración de Recursos Humanos", "Marketing y Ventas", "Presupuestos Operativos"]
+          },
+          {
+            year: "3° Año (Ciclos V y VI)",
+            title: "Módulo III: Gestión Estratégica y Proyectos",
+            units: ["Planeamiento Estratégico y Calidad", "Sistemas Integrados de Gestión", "Comercio Exterior", "Plan de Negocios e Innovación"]
+          }
+        ],
+        workplaces: [
+          "Áreas de Administración, Logística y Recursos Humanos en empresas privadas",
+          "Instituciones del Estado y gobiernos locales",
+          "Entidades financieras y empresas de servicios",
+          "Dirección y gestión de negocios propios"
+        ]
+      },
+      {
+        id: 4,
+        name: "Laboratorio Clínico y Anatomía Patológica",
+        area: "Salud",
+        icon: "fa-microscope",
+        keywords: "muestras biologicas diagnostico medico salud sangre microbiologia bioquimica hospital",
+        description: "Enfocado en el análisis de muestras biológicas y apoyo al diagnóstico médico.",
+        profile: "El Profesional Técnico en Laboratorio Clínico y Anatomía Patológica obtiene, procesa y analiza muestras biológicas humanas aplicando protocolos estrictos de bioseguridad y control de calidad para brindar soporte confiable al diagnóstico médico.",
+        modules: [
+          {
+            year: "1° Año (Ciclos I y II)",
+            title: "Módulo I: Toma de Muestras y Bioseguridad",
+            units: ["Anatomía y Fisiología Humana", "Bioseguridad y Control de Calidad", "Obtención y Recepción de Muestras Biológicas", "Química Clínica Básica"]
+          },
+          {
+            year: "2° Año (Ciclos III y IV)",
+            title: "Módulo II: Hematología, Bioquímica e Inmunología",
+            units: ["Hematología Clínica y Banco de Sangre", "Bioquímica Clínica", "Inmunología y Serología", "Parasitología Humana"]
+          },
+          {
+            year: "3° Año (Ciclos V y VI)",
+            title: "Módulo III: Microbiología y Anatomía Patológica",
+            units: ["Microbiología Clínica", "Histotecnología y Citología", "Gestión de Calidad en Laboratorio", "Salud Pública y Ética"]
+          }
+        ],
+        workplaces: [
+          "Hospitales del MINSA, EsSalud y clínicas privadas",
+          "Laboratorios clínicos de diagnóstico y bancos de sangre",
+          "Centros de salud y postas médicas",
+          "Laboratorios de investigación biomédica y salud ocupacional"
+        ]
+      },
+      {
+        id: 5,
+        name: "Electricidad Industrial",
+        area: "Ingeniería e Industria",
+        icon: "fa-bolt",
+        keywords: "instalacion mantenimiento automatizacion sistemas electricos industriales motores tableros plc",
+        description: "Orienta en la instalación, mantenimiento y automatización de sistemas eléctricos industriales.",
+        profile: "El Profesional Técnico en Electricidad Industrial ejecuta proyectos de instalaciones eléctricas industriales y comerciales, mantiene motores, transformadores y tableros eléctricos, e implementa sistemas de automatización y control.",
+        modules: [
+          {
+            year: "1° Año (Ciclos I y II)",
+            title: "Módulo I: Instalaciones y Mediciones Eléctricas",
+            units: ["Electrotecnia Industrial", "Instalaciones Eléctricas Interiores", "Instrumentación y Mediciones Eléctricas", "Dibujo Técnico Eléctrico"]
+          },
+          {
+            year: "2° Año (Ciclos III y IV)",
+            title: "Módulo II: Máquinas Eléctricas y Automatización",
+            units: ["Mantenimiento y Rebobinado de Motores", "Automatización por Contactores", "Controladores Lógicos Programables (PLC)", "Electrónica de Potencia"]
+          },
+          {
+            year: "3° Año (Ciclos V y VI)",
+            title: "Módulo III: Sistemas de Potencia y Eficiencia Energética",
+            units: ["Subestaciones y Redes Eléctricas", "Puesta a Tierra y Protección Eléctrica", "Energías Renovables y Eficiencia Energética", "Seguridad Industrial"]
+          }
+        ],
+        workplaces: [
+          "Plantas industriales manufactureras, textiles y agroindustriales",
+          "Empresas contratistas de montaje e instalaciones eléctricas",
+          "Áreas de mantenimiento eléctrico en centros comerciales y hospitales",
+          "Servicios técnicos independientes de tableros y automatización"
+        ]
+      },
+      {
+        id: 6,
+        name: "Electrónica Industrial",
+        area: "Ingeniería e Industria",
+        icon: "fa-microchip",
+        keywords: "diseno control reparacion equipos sistemas electronicos robotica sensores microcontroladores",
+        description: "Centrado en el diseño, control y reparación de equipos y sistemas electrónicos.",
+        profile: "El Profesional Técnico en Electrónica Industrial diseña circuitos analógicos y digitales, programa microcontroladores y sistemas automatizados, calibra instrumentación industrial y diagnostica y repara equipos electrónicos complejos.",
+        modules: [
+          {
+            year: "1° Año (Ciclos I y II)",
+            title: "Módulo I: Electrónica Analógica y Digital",
+            units: ["Circuitos y Dispositivos Analógicos", "Electrónica Digital", "Diseño de Circuitos Impresos (PCB)", "Taller de Ensamblaje y Soldadura"]
+          },
+          {
+            year: "2° Año (Ciclos III y IV)",
+            title: "Módulo II: Microcontroladores e Instrumentación",
+            units: ["Microcontroladores y Sistemas Embebidos", "Sensores e Instrumentación Industrial", "Electrónica de Potencia", "Neumática e Hidráulica"]
+          },
+          {
+            year: "3° Año (Ciclos V y VI)",
+            title: "Módulo III: Control Industrial y Telecomunicaciones",
+            units: ["Redes Industriales y SCADA", "Robótica y Control Automático", "Sistemas de Telecomunicaciones", "Mantenimiento de Equipos Electrónicos"]
+          }
+        ],
+        workplaces: [
+          "Industrias automatizadas de alimentos, bebidas, plásticos y fármacos",
+          "Empresas de instrumentación, telemetría y control de procesos",
+          "Talleres y laboratorios de reparación de equipos electrónicos",
+          "Proyectos de automatización, domótica e Internet de las Cosas (IoT)"
+        ]
+      },
+      {
+        id: 7,
+        name: "Mecánica de Producción Industrial",
+        area: "Ingeniería e Industria",
+        icon: "fa-gears",
+        keywords: "manufactura maquinado piezas control de calidad torno fresadora cnc soldadura cad cam",
+        description: "Especializa en procesos de manufactura, maquinado de piezas y control de calidad.",
+        profile: "El Profesional Técnico en Mecánica de Producción Industrial diseña componentes mecánicos en CAD/CAM, opera máquinas herramientas convencionales y CNC, fabrica matrices y ejecuta procesos de soldadura y control de calidad dimensional.",
+        modules: [
+          {
+            year: "1° Año (Ciclos I y II)",
+            title: "Módulo I: Diseño Mecánico y Maquinado Convencional",
+            units: ["Dibujo Mecánico y Diseño CAD", "Metrología y Control de Calidad", "Torno y Fresadora Convencional", "Tecnología de Materiales"]
+          },
+          {
+            year: "2° Año (Ciclos III y IV)",
+            title: "Módulo II: Soldadura y Matricería",
+            units: ["Soldadura SMAW, MIG/MAG y TIG", "Matricería y Moldes", "Tratamientos Térmicos", "Mantenimiento Mecánico Industrial"]
+          },
+          {
+            year: "3° Año (Ciclos V y VI)",
+            title: "Módulo III: Manufactura CNC y Producción",
+            units: ["Programación y Operación CNC", "Manufactura Asistida por Computadora (CAM)", "Automatización Neumática e Hidráulica", "Gestión de Producción y Calidad"]
+          }
+        ],
+        workplaces: [
+          "Empresas metalmecánicas y maestranzas industriales",
+          "Plantas de fabricación de repuestos, maquinaria y estructuras",
+          "Áreas de mantenimiento mecánico en minería e industria pesada",
+          "Talleres propios de mecanizado CNC y matricería"
+        ]
+      },
+      {
+        id: 8,
+        name: "Mecatrónica Automotriz",
+        area: "Ingeniería e Industria",
+        icon: "fa-car-battery",
+        keywords: "diagnostico mantenimiento reparacion vehiculos modernos sistemas automotrices scanner motores",
+        description: "Dedicado al diagnóstico, mantenimiento y reparación de vehículos modernos y sistemas automotrices.",
+        profile: "El Profesional Técnico en Mecatrónica Automotriz realiza el diagnóstico electrónico computarizado, mantenimiento y reparación integral de motores, sistemas de inyección electrónica, transmisión, suspensión, frenos y sistemas automotrices modernos.",
+        modules: [
+          {
+            year: "1° Año (Ciclos I y II)",
+            title: "Módulo I: Suspensión, Dirección, Frenos y Electricidad",
+            units: ["Mantenimiento Preventivo Vehicular", "Sistemas de Suspensión y Dirección", "Sistemas de Frenos Hidráulicos y ABS", "Electricidad Automotriz"]
+          },
+          {
+            year: "2° Año (Ciclos III y IV)",
+            title: "Módulo II: Motores y Sistemas de Transmisión",
+            units: ["Motores de Combustión Interna", "Transmisión Mecánica y Automática", "Electrónica Automotriz y Sensores", "Climatización Vehicular"]
+          },
+          {
+            year: "3° Año (Ciclos V y VI)",
+            title: "Módulo III: Inyección Electrónica y Diagnóstico Computarizado",
+            units: ["Inyección Electrónica Gasolina y Diésel", "Diagnóstico con Escáner y Osciloscopio", "Sistemas Vehiculares Híbridos y Eléctricos", "Gestión de Talleres Automotrices"]
+          }
+        ],
+        workplaces: [
+          "Concesionarios oficiales de marcas automotrices y flotas",
+          "Centros especializados de diagnóstico electrónico e inyección",
+          "Empresas de transporte urbano, carga y maquinaria",
+          "Talleres multimarca y centros de servicio automotriz propios"
+        ]
+      },
+      {
+        id: 9,
+        name: "Metalurgia",
+        area: "Ingeniería e Industria",
+        icon: "fa-fire-burner",
+        keywords: "extraccion transformacion tratamiento metales minerales fundicion mineria ensayos",
+        description: "Enfocado en la extracción, transformación y tratamiento de metales y minerales.",
+        profile: "El Profesional Técnico en Metalurgia supervisa y opera procesos de concentración y extracción de minerales, fundición, tratamiento térmico y ensayos metalográficos de metales ferrosos y no ferrosos bajo normas de calidad y seguridad ambiental.",
+        modules: [
+          {
+            year: "1° Año (Ciclos I y II)",
+            title: "Módulo I: Preparación y Análisis de Minerales",
+            units: ["Mineralogía y Química Metalúrgica", "Chancado, Molienda y Clasificación", "Muestreo y Análisis Químico", "Seguridad Minera y Metalúrgica"]
+          },
+          {
+            year: "2° Año (Ciclos III y IV)",
+            title: "Módulo II: Metalurgia Extractiva y Fundición",
+            units: ["Concentración de Minerales", "Hidrometalurgia y Pirometalurgia", "Fundición y Moldeo de Metales", "Control de Procesos Metalúrgicos"]
+          },
+          {
+            year: "3° Año (Ciclos V y VI)",
+            title: "Módulo III: Tratamiento de Metales y Gestión Ambiental",
+            units: ["Metalografía y Ensayos de Materiales", "Tratamientos Térmicos y Corrosión", "Gestión Ambiental y Tratamiento de Efluentes", "Control de Calidad Metalúrgica"]
+          }
+        ],
+        workplaces: [
+          "Plantas concentradoras y refinerías minero-metalúrgicas",
+          "Fundiciones industriales de acero, cobre, bronce y aluminio",
+          "Laboratorios de análisis químico, metalografía y control de calidad",
+          "Empresas proveedoras de insumos y tecnología para minería"
+        ]
+      }
+    ];
+
+    /**
+     * ESTADO GLOBAL DE LA APLICACIÓN
+     */
+    const DEFAULT_WHATSAPP_NUMBER = "+51 987 654 321";
+    const STORAGE_KEY_PHONE = "cueto_whatsapp_target_phone_v2";
+
+    const appState = {
+      selectedArea: "Todas",
+      searchQuery: "",
+      targetWhatsAppPhone: DEFAULT_WHATSAPP_NUMBER,
+      isWidgetOpen: false
+    };
+
+    /**
+     * UTILIDADES DE WHATSAPP Y NOTIFICACIONES TOAST
+     */
+    function sanitizePhoneForWa(rawPhone) {
+      const digitsOnly = String(rawPhone || "").replace(/\D/g, "");
+      if (!digitsOnly) return "51987654321";
+      if (digitsOnly.length === 9 && digitsOnly.startsWith("9")) {
+        return "51" + digitsOnly;
+      }
+      return digitsOnly;
+    }
+
+    function buildWhatsAppUrl(messageText) {
+      const cleanPhone = sanitizePhoneForWa(appState.targetWhatsAppPhone);
+      const encodedText = encodeURIComponent(messageText.trim());
+      return `https://wa.me/${cleanPhone}?text=${encodedText}`;
+    }
+
+    function openDirectWhatsApp(messageText) {
+      const url = buildWhatsAppUrl(messageText);
+      try {
+        window.open(url, "_blank", "noopener,noreferrer");
+        showToast("Abriendo WhatsApp con tu consulta lista para enviar...", "whatsapp");
+      } catch (err) {
+        showToast("No se pudo abrir WhatsApp. Verifica las ventanas emergentes del navegador.", "error");
+      }
+    }
+
+    function showToast(message, type = "info") {
+      const container = document.getElementById("toastContainer");
+      if (!container) return;
+
+      const stylesByType = {
+        whatsapp: "bg-cueto-navyDark text-white border-l-4 border-whatsapp",
+        success: "bg-cueto-navyDark text-white border-l-4 border-cueto-sky",
+        error: "bg-red-950 text-white border-l-4 border-red-500",
+        info: "bg-cueto-navyDark text-white border-l-4 border-cueto-cobalt"
+      };
+
+      const iconByType = {
+        whatsapp: '<i class="fa-brands fa-whatsapp text-whatsapp text-lg"></i>',
+        success: '<i class="fa-solid fa-circle-check text-cueto-sky text-lg"></i>',
+        error: '<i class="fa-solid fa-triangle-exclamation text-red-400 text-lg"></i>',
+        info: '<i class="fa-solid fa-circle-info text-sky-300 text-lg"></i>'
+      };
+
+      const toast = document.createElement("div");
+      toast.className = `pointer-events-auto flex items-center gap-3 px-4 py-3.5 rounded-2xl shadow-2xl text-xs sm:text-sm font-medium transition-all duration-300 translate-y-2 opacity-0 ${stylesByType[type] || stylesByType.info}`;
+      toast.innerHTML = `
+        <span class="shrink-0">${iconByType[type] || iconByType.info}</span>
+        <span class="flex-1 leading-snug">${message}</span>
+      `;
+
+      container.appendChild(toast);
+
+      requestAnimationFrame(() => {
+        toast.classList.remove("translate-y-2", "opacity-0");
+      });
+
+      setTimeout(() => {
+        toast.classList.add("opacity-0", "translate-y-2");
+        setTimeout(() => toast.remove(), 300);
+      }, 3600);
+    }
+
+    /**
+     * RENDERIZADO DEL CATÁLOGO DE LAS 9 CARRERAS
+     */
+    function getAreaBadgeClasses(area) {
+      switch (area) {
+        case "Ingeniería e Industria":
+          return "bg-blue-50 text-cueto-navy border-blue-200";
+        case "Tecnología":
+          return "bg-sky-50 text-sky-800 border-sky-200";
+        case "Gestión y Negocios":
+          return "bg-indigo-50 text-indigo-900 border-indigo-200";
+        case "Salud":
+          return "bg-emerald-50 text-emerald-800 border-emerald-200";
+        default:
+          return "bg-slate-100 text-slate-700 border-slate-200";
+      }
+    }
+
+    function renderCareersCatalog() {
+      const grid = document.getElementById("careersGrid");
+      const emptyState = document.getElementById("emptyCareersState");
+      const countText = document.getElementById("resultsCountText");
+      if (!grid) return;
+
+      const query = appState.searchQuery.trim().toLowerCase();
+
+      const filtered = CAREERS_DATA.filter((career) => {
+        const matchesArea = appState.selectedArea === "Todas" || career.area === appState.selectedArea;
+        const searchable = `${career.name} ${career.area} ${career.description} ${career.keywords}`.toLowerCase();
+        const matchesQuery = !query || searchable.includes(query);
+        return matchesArea && matchesQuery;
+      });
+
+      countText.innerHTML = `Mostrando <strong class="text-cueto-navy">${filtered.length}</strong> de ${CAREERS_DATA.length} carreras profesionales técnicas`;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = "";
+        emptyState.classList.remove("hidden");
+        return;
+      }
+
+      emptyState.classList.add("hidden");
+
+      grid.innerHTML = filtered
+        .map((career) => {
+          return `
+            <article class="bg-white rounded-3xl border border-slate-200/90 shadow-card hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden group">
+              <!-- Cabecera institucional azul marino + celeste -->
+              <div class="bg-gradient-to-r from-cueto-navy via-cueto-navy to-cueto-cobalt px-6 py-4 flex items-center justify-between text-white">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-sky-300">
+                  Carrera Oficial #0${career.id}
+                </span>
+                <div class="w-10 h-10 rounded-xl bg-white/15 backdrop-blur-sm flex items-center justify-center text-sky-200 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid ${career.icon} text-lg"></i>
+                </div>
+              </div>
+
+              <!-- Cuerpo de la Tarjeta -->
+              <div class="p-6 flex-1 flex flex-col justify-between space-y-5">
+                <div class="space-y-3">
+                  <span class="inline-block px-3 py-1 rounded-full border text-[11px] font-bold ${getAreaBadgeClasses(career.area)}">
+                    ${career.area}
+                  </span>
+
+                  <h3 class="font-display font-extrabold text-lg sm:text-xl text-cueto-navy leading-snug group-hover:text-cueto-cobalt transition-colors">
+                    ${career.name}
+                  </h3>
+
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    ${career.description}
+                  </p>
+                </div>
+
+                <!-- Metadatos + Botones Exactos -->
+                <div class="space-y-4">
+                  <div class="grid grid-cols-2 gap-2 pt-3 border-t border-slate-100 text-xs text-slate-600">
+                    <div class="flex items-center gap-2">
+                      <i class="fa-regular fa-calendar text-cueto-cobalt"></i>
+                      <span>3 años (6 ciclos)</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <i class="fa-regular fa-clock text-cueto-sky"></i>
+                      <span>Diurno y Nocturno</span>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+                    <button
+                      type="button"
+                      onclick="openCareerModal(${career.id})"
+                      class="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-slate-100 hover:bg-cueto-navy text-cueto-navy hover:text-white font-bold text-xs transition-colors cursor-pointer"
+                    >
+                      <i class="fa-solid fa-file-lines"></i>
+                      <span>Ver Plan y Detalles</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      onclick="consultCareerOnWhatsApp(${career.id})"
+                      class="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-whatsapp hover:bg-whatsapp-hover text-white font-bold text-xs shadow-sm transition-colors cursor-pointer"
+                    >
+                      <i class="fa-brands fa-whatsapp text-sm"></i>
+                      <span>Consultar por WhatsApp</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          `;
+        })
+        .join("");
+    }
+
+    /**
+     * Acción al hacer clic en "Consultar por WhatsApp" en cualquier tarjeta:
+     * Preselecciona esa carrera en el generador en vivo y abre WhatsApp directamente.
+     */
+    function consultCareerOnWhatsApp(careerId) {
+      const career = CAREERS_DATA.find((c) => c.id === careerId);
+      if (!career) return;
+
+      const careerSelect = document.getElementById("applicantCareer");
+      if (careerSelect) {
+        careerSelect.value = career.name;
+        updateWhatsAppLivePreview();
+      }
+
+      const directMsg = `Hola *IESTP "Carlos Cueto Fernandini"* 👋, deseo recibir información sobre la carrera profesional técnica de *${career.name}* (admisión, turnos y plan de estudios).`;
+      openDirectWhatsApp(directMsg);
+    }
+
+    function resetCareerFilters() {
+      appState.selectedArea = "Todas";
+      appState.searchQuery = "";
+      const searchInput = document.getElementById("careerSearchInput");
+      const clearBtn = document.getElementById("clearSearchBtn");
+      if (searchInput) searchInput.value = "";
+      if (clearBtn) clearBtn.classList.add("hidden");
+
+      document.querySelectorAll(".filter-btn").forEach((btn) => {
+        const isAll = btn.dataset.area === "Todas";
+        btn.className = isAll
+          ? "filter-btn active whitespace-nowrap px-4 py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all bg-cueto-navy text-white shadow-sm cursor-pointer"
+          : "filter-btn whitespace-nowrap px-4 py-3 rounded-2xl text-xs sm:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-sky-50 hover:text-cueto-navy cursor-pointer";
+      });
+
+      renderCareersCatalog();
+    }
+
+    /**
+     * MODAL DE PLAN DE ESTUDIOS Y PERFIL DEL EGRESADO
+     */
+    function openCareerModal(careerId) {
+      const career = CAREERS_DATA.find((c) => c.id === careerId);
+      if (!career) return;
+
+      const modal = document.getElementById("careerDetailModal");
+      document.getElementById("modalCareerArea").textContent = `${career.area} • Duración: 3 años (6 ciclos)`;
+      document.getElementById("modalCareerTitle").textContent = career.name;
+
+      const body = document.getElementById("modalCareerBody");
+      body.innerHTML = `
+        <!-- Perfil del Egresado -->
+        <div class="bg-sky-50/70 rounded-2xl p-4 sm:p-5 border border-sky-200/80 space-y-2">
+          <h4 class="font-display font-bold text-cueto-navy text-base flex items-center gap-2">
+            <i class="fa-solid fa-user-graduate text-cueto-cobalt"></i>
+            Perfil del Egresado
+          </h4>
+          <p class="text-slate-700 leading-relaxed text-xs sm:text-sm">${career.profile}</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1 rounded-lg bg-white border border-sky-200 text-xs font-semibold text-cueto-navy">
+              <i class="fa-solid fa-certificate text-cueto-sky mr-1"></i> Título a Nombre de la Nación
+            </span>
+            <span class="px-3 py-1 rounded-lg bg-white border border-sky-200 text-xs font-semibold text-cueto-navy">
+              <i class="fa-regular fa-calendar text-cueto-cobalt mr-1"></i> Duración: 3 años (6 ciclos)
+            </span>
+            <span class="px-3 py-1 rounded-lg bg-white border border-sky-200 text-xs font-semibold text-cueto-navy">
+              <i class="fa-regular fa-clock text-cueto-navy mr-1"></i> Turnos: Diurno y Nocturno
+            </span>
+          </div>
+        </div>
+
+        <!-- Módulos por Año (6 ciclos) -->
+        <div class="space-y-3">
+          <h4 class="font-display font-bold text-cueto-navy text-base flex items-center gap-2">
+            <i class="fa-solid fa-layer-group text-cueto-sky"></i>
+            Plan de Estudios Modular (3 años / 6 ciclos)
+          </h4>
+          <div class="space-y-3">
+            ${career.modules
+              .map(
+                (mod) => `
+              <div class="rounded-2xl border border-slate-200 p-4 bg-white">
+                <span class="inline-block text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-blue-50 text-cueto-navy mb-2">
+                  ${mod.year}
+                </span>
+                <p class="font-display font-bold text-sm text-slate-900 mb-2">${mod.title}</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+                  ${mod.units
+                    .map(
+                      (unit) => `
+                    <div class="flex items-start gap-2 text-xs text-slate-600">
+                      <i class="fa-solid fa-check text-cueto-cobalt mt-0.5 shrink-0"></i>
+                      <span>${unit}</span>
+                    </div>
+                  `
+                    )
+                    .join("")}
+                </div>
+              </div>
+            `
+              )
+              .join("")}
+          </div>
+        </div>
+
+        <!-- Campo Laboral -->
+        <div class="space-y-2.5">
+          <h4 class="font-display font-bold text-cueto-navy text-base flex items-center gap-2">
+            <i class="fa-solid fa-briefcase text-whatsapp-dark"></i>
+            Campo Laboral
+          </h4>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            ${career.workplaces
+              .map(
+                (place) => `
+              <li class="flex items-start gap-2.5 p-3 rounded-xl bg-emerald-50/60 border border-emerald-100 text-xs text-slate-700">
+                <i class="fa-solid fa-building-circle-check text-whatsapp-dark mt-0.5 shrink-0"></i>
+                <span>${place}</span>
+              </li>
+            `
+              )
+              .join("")}
+          </ul>
+        </div>
+      `;
+
+      document.getElementById("modalWhatsAppBtn").onclick = () => {
+        consultCareerOnWhatsApp(career.id);
+      };
+
+      document.getElementById("modalSelectFormBtn").onclick = () => {
+        const careerSelect = document.getElementById("applicantCareer");
+        if (careerSelect) {
+          careerSelect.value = career.name;
+          updateWhatsAppLivePreview();
+        }
+        closeCareerModal();
+        document.getElementById("consulta-whatsapp")?.scrollIntoView({ behavior: "smooth" });
+        showToast(`Carrera "${career.name}" seleccionada en el generador.`, "success");
+      };
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeCareerModal() {
+      const modal = document.getElementById("careerDetailModal");
+      if (!modal) return;
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      document.body.style.overflow = "";
+    }
+
+    /**
+     * GENERADOR DE CONSULTA Y VISTA PREVIA DE WHATSAPP EN VIVO
+     */
+    function generateFormattedWhatsAppMessage() {
+      const name = (document.getElementById("applicantName")?.value || "").trim() || "[Tu Nombre Completo]";
+      const career = document.getElementById("applicantCareer")?.value || CAREERS_DATA[0].name;
+      const shiftRadio = document.querySelector('input[name="applicantShift"]:checked');
+      const shift = shiftRadio ? shiftRadio.value : "Diurno";
+      const reason = document.getElementById("applicantReason")?.value || "Admisión y requisitos";
+      const notes = (document.getElementById("applicantNotes")?.value || "").trim();
+
+      let msg = `Hola *IESTP "Carlos Cueto Fernandini"* 👋, me comunico desde su portal web institucional.\n\n`;
+      msg += `• *Postulante:* ${name}\n`;
+      msg += `• *Carrera de interés:* ${career}\n`;
+      msg += `• *Turno preferido:* ${shift}\n`;
+      msg += `• *Motivo de consulta:* ${reason}`;
+
+      if (notes) {
+        msg += `\n• *Consulta adicional:* ${notes}`;
+      }
+
+      msg += `\n\nQuedo atento(a) a su orientación. ¡Muchas gracias!`;
+      return msg;
+    }
+
+    function updateWhatsAppLivePreview() {
+      const previewEl = document.getElementById("whatsappLivePreview");
+      const timeEl = document.getElementById("previewTimestamp");
+      if (previewEl) {
+        previewEl.textContent = generateFormattedWhatsAppMessage();
+      }
+      if (timeEl) {
+        const now = new Date();
+        timeEl.textContent = `${String(now.getHours()).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")}`;
+      }
+    }
+
+    function copyPreviewMessage() {
+      const textToCopy = generateFormattedWhatsAppMessage();
+      try {
+        const temp = document.createElement("textarea");
+        temp.value = textToCopy;
+        temp.setAttribute("readonly", "");
+        temp.style.position = "fixed";
+        temp.style.opacity = "0";
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand("copy");
+        document.body.removeChild(temp);
+        showToast("Mensaje copiado al portapapeles.", "success");
+      } catch (e) {
+        showToast("No se pudo copiar automáticamente el mensaje.", "error");
+      }
+    }
+
+    function updateTargetPhoneDisplay(rawVal) {
+      const displayVal = (rawVal || "").trim() || DEFAULT_WHATSAPP_NUMBER;
+      appState.targetWhatsAppPhone = displayVal;
+
+      const badge = document.getElementById("activeTargetBadge");
+      const footerPhone = document.getElementById("footerPreviewPhone");
+      if (badge) badge.textContent = displayVal;
+      if (footerPhone) footerPhone.textContent = displayVal;
+
+      try {
+        localStorage.setItem(STORAGE_KEY_PHONE, displayVal);
+      } catch (e) {
+        // Ignorar si almacenamiento restringido
+      }
+    }
+
+    function resetWhatsAppNumber() {
+      const input = document.getElementById("customWhatsAppNumber");
+      if (input) input.value = DEFAULT_WHATSAPP_NUMBER;
+      updateTargetPhoneDisplay(DEFAULT_WHATSAPP_NUMBER);
+      showToast("Número de destino restaurado a +51 987 654 321.", "info");
+    }
+
+    /**
+     * WIDGET FLOTANTE DE WHATSAPP
+     */
+    function toggleFloatingWidget(forceState) {
+      const win = document.getElementById("floatingChatWindow");
+      const icon = document.getElementById("floatingWaIcon");
+      if (!win) return;
+
+      appState.isWidgetOpen = typeof forceState === "boolean" ? forceState : !appState.isWidgetOpen;
+
+      if (appState.isWidgetOpen) {
+        win.classList.remove("hidden");
+        if (icon) icon.className = "fa-solid fa-xmark text-2xl sm:text-3xl";
+      } else {
+        win.classList.add("hidden");
+        if (icon) icon.className = "fa-brands fa-whatsapp text-3xl sm:text-4xl";
+      }
+    }
+
+    function handleWidgetQuickReply(topic) {
+      const area = document.getElementById("widgetMessagesArea");
+      if (!area) return;
+
+      const faqMap = {
+        carreras: {
+          question: "Ver las 9 carreras",
+          answer: "Ofrecemos 9 carreras de 3 años (6 ciclos) con Título a Nombre de la Nación: Arquitectura de Plataformas y Servicios de TI, Contabilidad, Gestión Administrativa, Laboratorio Clínico y Anatomía Patológica, Electricidad Industrial, Electrónica Industrial, Mecánica de Producción Industrial, Mecatrónica Automotriz y Metalurgia.",
+          waMessage: "Hola IESTP Carlos Cueto Fernandini, deseo información detallada sobre sus 9 carreras profesionales técnicas."
+        },
+        requisitos: {
+          question: "Requisitos de admisión",
+          answer: "Para postular necesitas: Certificado de Estudios Secundarios (o CLA MINEDU), copia de DNI vigente, Partida de Nacimiento, fotografía digital tamaño carné fondo blanco y comprobante de inscripción.",
+          waMessage: "Hola IESTP Carlos Cueto Fernandini, quisiera consultar los requisitos y fechas de inscripción para admisión."
+        },
+        turnos: {
+          question: "Turnos disponibles",
+          answer: "Contamos con turnos Diurno y Nocturno (18:00 a 22:30 hrs) para que puedas estudiar y trabajar con total flexibilidad.",
+          waMessage: "Hola IESTP Carlos Cueto Fernandini, deseo consultar sobre los horarios en los turnos Diurno y Nocturno."
+        },
+        ubicacion: {
+          question: "Ubicación en Lima",
+          answer: "Estamos ubicados en Av. Túpac Amaru s/n Km. 8 1/2, Comas, Lima - Perú. Atendemos de Lunes a Viernes de 08:00 a 22:30 hrs.",
+          waMessage: "Hola IESTP Carlos Cueto Fernandini, quisiera información para visitar su sede en Comas, Lima."
+        }
+      };
+
+      const item = faqMap[topic];
+      if (!item) return;
+
+      const escapedWa = item.waMessage.replace(/'/g, "\\'");
+
+      const html = `
+        <div class="self-end ml-auto bg-whatsapp-bubble rounded-2xl rounded-tr-none p-2.5 shadow-sm border border-emerald-200 max-w-[85%] text-slate-800 font-medium">
+          ${item.question}
+        </div>
+        <div class="bg-white rounded-2xl rounded-tl-none p-3 shadow-sm border border-black/5 max-w-[92%] space-y-2">
+          <p class="text-slate-700 leading-relaxed">${item.answer}</p>
+          <button
+            type="button"
+            onclick="openDirectWhatsApp('${escapedWa}')"
+            class="w-full inline-flex items-center justify-center gap-1.5 bg-whatsapp hover:bg-whatsapp-hover text-white font-bold text-[11px] py-2 px-3 rounded-xl transition-colors cursor-pointer"
+          >
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+            <span>Continuar en WhatsApp</span>
+          </button>
+        </div>
+      `;
+
+      area.insertAdjacentHTML("beforeend", html);
+      area.scrollTop = area.scrollHeight;
+    }
+
+    function closeMobileMenu() {
+      const menu = document.getElementById("mobileMenu");
+      const icon = document.getElementById("mobileMenuIcon");
+      const btn = document.getElementById("mobileMenuBtn");
+      if (menu) menu.classList.add("hidden");
+      if (icon) icon.className = "fa-solid fa-bars text-lg";
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    }
+
+    /**
+     * INICIALIZACIÓN GENERAL AL CARGAR EL DOM
+     */
+    document.addEventListener("DOMContentLoaded", () => {
+      // Inyectar las 4 instancias del Escudo Oficial SVG con IDs únicos
+      const crestSlots = [
+        { id: "navbarCrestSlot", uid: "nav-crest" },
+        { id: "heroCrestSlot", uid: "hero-crest" },
+        { id: "aboutCrestSlot", uid: "about-crest" },
+        { id: "footerCrestSlot", uid: "footer-crest" }
+      ];
+      crestSlots.forEach((slot) => {
+        const el = document.getElementById(slot.id);
+        if (el) el.innerHTML = buildOfficialCrestSVG(slot.uid);
+      });
+
+      // Cargar número personalizado guardado si existe
+      try {
+        const savedPhone = localStorage.getItem(STORAGE_KEY_PHONE);
+        if (savedPhone) {
+          appState.targetWhatsAppPhone = savedPhone;
+          const phoneInput = document.getElementById("customWhatsAppNumber");
+          if (phoneInput) phoneInput.value = savedPhone;
+          updateTargetPhoneDisplay(savedPhone);
+        }
+      } catch (e) {
+        // Ignorar
+      }
+
+      // Poblar selector de las 9 carreras en el formulario WhatsApp
+      const careerSelect = document.getElementById("applicantCareer");
+      if (careerSelect) {
+        careerSelect.innerHTML = CAREERS_DATA.map(
+          (c) => `<option value="${c.name}">${c.name}</option>`
+        ).join("");
+      }
+
+      // Poblar enlaces de las 9 carreras en el Footer
+      const footerList = document.getElementById("footerCareersList");
+      if (footerList) {
+        footerList.innerHTML = CAREERS_DATA.map(
+          (c) => `
+            <li>
+              <button
+                type="button"
+                onclick="openCareerModal(${c.id})"
+                class="text-left text-slate-300 hover:text-sky-300 transition-colors inline-flex items-center gap-2 cursor-pointer"
+              >
+                <i class="fa-solid fa-angle-right text-cueto-sky text-xs"></i>
+                <span>${c.name}</span>
+              </button>
+            </li>
+          `
+        ).join("");
+      }
+
+      // Renderizar catálogo y vista previa inicial
+      renderCareersCatalog();
+      updateWhatsAppLivePreview();
+
+      // Buscador en tiempo real
+      const searchInput = document.getElementById("careerSearchInput");
+      const clearBtn = document.getElementById("clearSearchBtn");
+      if (searchInput) {
+        searchInput.addEventListener("input", (e) => {
+          appState.searchQuery = e.target.value;
+          if (clearBtn) clearBtn.classList.toggle("hidden", !appState.searchQuery.trim());
+          renderCareersCatalog();
+        });
+      }
+      if (clearBtn) {
+        clearBtn.addEventListener("click", () => {
+          appState.searchQuery = "";
+          if (searchInput) searchInput.value = "";
+          clearBtn.classList.add("hidden");
+          renderCareersCatalog();
+        });
+      }
+
+      // Filtros por área
+      document.querySelectorAll(".filter-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          appState.selectedArea = btn.dataset.area;
+          document.querySelectorAll(".filter-btn").forEach((b) => {
+            const active = b === btn;
+            b.className = active
+              ? "filter-btn active whitespace-nowrap px-4 py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all bg-cueto-navy text-white shadow-sm cursor-pointer"
+              : "filter-btn whitespace-nowrap px-4 py-3 rounded-2xl text-xs sm:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-sky-50 hover:text-cueto-navy cursor-pointer";
+          });
+          renderCareersCatalog();
+        });
+      });
+
+      // Actualización en vivo de la vista previa WhatsApp
+      ["applicantName", "applicantCareer", "applicantReason", "applicantNotes"].forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.addEventListener("input", () => {
+            if (id === "applicantName") {
+              document.getElementById("nameErrorHint")?.classList.add("hidden");
+            }
+            updateWhatsAppLivePreview();
+          });
+          el.addEventListener("change", updateWhatsAppLivePreview);
+        }
+      });
+
+      document.querySelectorAll('input[name="applicantShift"]').forEach((radio) => {
+        radio.addEventListener("change", updateWhatsAppLivePreview);
+      });
+
+      // Panel desplegable de número WhatsApp destino
+      const toggleConfigBtn = document.getElementById("togglePhoneConfigBtn");
+      const configPanel = document.getElementById("phoneConfigPanel");
+      const configChevron = document.getElementById("phoneConfigChevron");
+      if (toggleConfigBtn && configPanel) {
+        toggleConfigBtn.addEventListener("click", () => {
+          const isHidden = configPanel.classList.contains("hidden");
+          configPanel.classList.toggle("hidden");
+          toggleConfigBtn.setAttribute("aria-expanded", String(isHidden));
+          if (configChevron) {
+            configChevron.style.transform = isHidden ? "rotate(180deg)" : "rotate(0deg)";
+          }
+        });
+      }
+
+      const customPhoneInput = document.getElementById("customWhatsAppNumber");
+      if (customPhoneInput) {
+        customPhoneInput.addEventListener("input", (e) => {
+          updateTargetPhoneDisplay(e.target.value);
+        });
+      }
+
+      // Envío del formulario principal de WhatsApp
+      const waForm = document.getElementById("whatsappBuilderForm");
+      if (waForm) {
+        waForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const nameVal = (document.getElementById("applicantName")?.value || "").trim();
+          const nameHint = document.getElementById("nameErrorHint");
+
+          if (!nameVal) {
+            if (nameHint) nameHint.classList.remove("hidden");
+            document.getElementById("applicantName")?.focus();
+            showToast("Por favor ingresa tu nombre completo para enviar la consulta.", "error");
+            return;
+          }
+
+          openDirectWhatsApp(generateFormattedWhatsAppMessage());
+        });
+      }
+
+      // Envío de texto libre desde el Widget Flotante
+      const widgetForm = document.getElementById("widgetFreeTextForm");
+      if (widgetForm) {
+        widgetForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const input = document.getElementById("widgetInput");
+          const text = (input?.value || "").trim();
+          if (!text) {
+            showToast("Escribe tu consulta antes de enviarla por WhatsApp.", "info");
+            input?.focus();
+            return;
+          }
+          openDirectWhatsApp(`Hola IESTP "Carlos Cueto Fernandini", tengo la siguiente consulta:\n\n"${text}"`);
+          if (input) input.value = "";
+        });
+      }
+
+      // Menú móvil
+      const mobileBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileIcon = document.getElementById("mobileMenuIcon");
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener("click", () => {
+          const isOpen = !mobileMenu.classList.contains("hidden");
+          mobileMenu.classList.toggle("hidden");
+          mobileBtn.setAttribute("aria-expanded", String(!isOpen));
+          if (mobileIcon) {
+            mobileIcon.className = isOpen ? "fa-solid fa-bars text-lg" : "fa-solid fa-xmark text-lg";
+          }
+        });
+      }
+
+      // Cierre del modal con clic exterior o tecla Escape
+      const modal = document.getElementById("careerDetailModal");
+      if (modal) {
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) closeCareerModal();
+        });
+      }
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeCareerModal();
+          if (appState.isWidgetOpen) toggleFloatingWidget(false);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
