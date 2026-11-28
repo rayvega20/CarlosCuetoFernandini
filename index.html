@@ -840,7 +840,7 @@
 
             <!-- Pie de Vista Previa -->
             <div class="bg-[#F0F2F5] px-4 py-3 border-t border-slate-200 flex items-center justify-between text-xs text-slate-600">
-              <span>Destino: <strong id="footerPreviewPhone" class="text-cueto-navy font-mono">+51 987 654 321</strong></span>
+              <span>Destino: <strong id="footerPreviewPhone" class="text-cueto-navy font-mono">+51 964827591</strong></span>
               <span class="text-whatsapp-dark font-bold"><i class="fa-solid fa-circle-check mr-1"></i>Conectado</span>
             </div>
           </div>
@@ -1671,7 +1671,7 @@
     /**
      * ESTADO GLOBAL DE LA APLICACIÓN
      */
-    const DEFAULT_WHATSAPP_NUMBER = "+51 987 654 321";
+    const DEFAULT_WHATSAPP_NUMBER = "+51 964 827 591";
     const STORAGE_KEY_PHONE = "cueto_whatsapp_target_phone_v2";
 
     const appState = {
@@ -1686,7 +1686,7 @@
      */
     function sanitizePhoneForWa(rawPhone) {
       const digitsOnly = String(rawPhone || "").replace(/\D/g, "");
-      if (!digitsOnly) return "51987654321";
+      if (!digitsOnly) return "51964827591";
       if (digitsOnly.length === 9 && digitsOnly.startsWith("9")) {
         return "51" + digitsOnly;
       }
@@ -2086,7 +2086,7 @@
       const input = document.getElementById("customWhatsAppNumber");
       if (input) input.value = DEFAULT_WHATSAPP_NUMBER;
       updateTargetPhoneDisplay(DEFAULT_WHATSAPP_NUMBER);
-      showToast("Número de destino restaurado a +51 987 654 321.", "info");
+      showToast("Número de destino restaurado a +51 964827591.", "info");
     }
 
     /**
